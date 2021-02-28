@@ -14,14 +14,14 @@ Junia Janvier: Team Lead
 ## Jira Backlog
 ### Ordering of Backlog
 * We are ordering the backlog based on what information we have and which are accomplishable without the assistance of another component to test the functionality (ie. having the database set up before developing a filter).
-https://buspark.atlassian.net/jira/software/projects/COR/boards/19
+<br/>https://buspark.atlassian.net/jira/software/projects/COR/boards/19
 
 ## Sprint Planning
 
 
 ## Daily Scrums
 ### Daily Scrum #1
-During this scrum, we worked on developing our backlog, solution validations, and github/readme.
+**During this scrum, we worked on developing our backlog, solution validations, and github/readme.**
 * Backlog
   * Adding User stories to Jira Backlog (Amelia)
 * Solution Validation
@@ -31,7 +31,7 @@ During this scrum, we worked on developing our backlog, solution validations, an
   * Setting up Github/Readme (Sophie)
 * UXD Snapshots
   * Working on next snapshot after Lo-Fi Wireframes (Joanna)
-Activities for Upcoming Week
+<br/>**Activities for Upcoming Week**
 * Backlog
   * Adding 6 more User stories to Jira Backlog (Amelia)
 * Solution Validation
@@ -40,5 +40,5 @@ Activities for Upcoming Week
   * Putting final touches on the mock website (Joanna & Sophie)
 * UXD Snapshots
   * Finish up snapshot - adjustments based on interview suggestions (Joanna)
-Impediments:
+<br/>**Impediments:**
 * Tech Stack: Still in discussion, will be following up with mentors

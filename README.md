@@ -31,6 +31,7 @@ Junia Janvier: Team Lead
   * Setting up Github/Readme (Sophie)
 * UXD Snapshots
   * Working on next snapshot after Lo-Fi Wireframes (Joanna)
+ 
 <br/>**Activities for Upcoming Week**
 * Backlog
   * Adding 6 more User stories to Jira Backlog (Amelia)
@@ -40,5 +41,6 @@ Junia Janvier: Team Lead
   * Putting final touches on the mock website (Joanna & Sophie)
 * UXD Snapshots
   * Finish up snapshot - adjustments based on interview suggestions (Joanna)
+
 <br/>**Impediments:**
 * Tech Stack: Still in discussion, will be following up with mentors

@@ -5,11 +5,11 @@ Our goal is better to understand how we can best improve the user experience of 
 
 # Meet the Team
 
-Junia Janvier: Team Lead
-Joanna Jung: UI/UX Designer
-Sophie Fang: Technical Member
-Ha (Amelia) Nguyen: Technical Member
-Abdul Ka: Technical Member
+<\br> Junia Janvier: Team Lead
+<\br> Joanna Jung: UI/UX Designer
+<\br> Sophie Fang: Technical Member
+<\br> Ha (Amelia) Nguyen: Technical Member
+<\br> Abdul Ka: Technical Member
 
 # Jira Backlog
 https://buspark.atlassian.net/jira/software/projects/COR/boards/19

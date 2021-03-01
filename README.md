@@ -14,10 +14,10 @@ Junia Janvier: Team Lead
 ## Jira Backlog
 ### Ordering of Backlog
 * We are ordering the backlog based on what information we have and which are accomplishable without the assistance of another component to test the functionality (ie. having the database set up before developing a filter).
-<br/>https://buspark.atlassian.net/jira/software/projects/COR/boards/19
+<br/>https://buspark.atlassian.net/jira/software/projects/CP/boards/16
 
 ## Sprint Planning
-
+The forecast for our first sprint is to complete 2 with the first including plotting the intitial businesses and vendors and the second involving our design of the intitial page of the site. Due to the search and filtering to be closely tied, we decided to hold off on this to ensure that we can focus on developing our database as a team collective in the following sprint. 
 
 ## Daily Scrums
 ### Daily Scrum #1
@@ -33,8 +33,9 @@ Junia Janvier: Team Lead
   * Working on next snapshot after Lo-Fi Wireframes (Joanna)
  
 <br/>**Activities for Upcoming Week**
-* Backlog
-  * Adding 6 more User stories to Jira Backlog (Amelia)
+* Backlog (Ordered based on the user flow of consumers when navigating the app based on the feedback of interviews and validation)   
+  * Going into web app and seeing display of Black Owned Businesses and vendors (general info)
+  * Seeing main page organized by categories with search engine (i.e. the UXD design)
 * Solution Validation
   * Finishing up interviews (Joanna and Amelia) 
   * Hypothesis List (Junia)

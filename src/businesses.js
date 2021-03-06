@@ -44,11 +44,11 @@ export const businessesJSON = [
     link: "http://www.crownedbyglory.com/",
   },
   {
-    name: "Cramer's Hair studio",
-    link: "",
+    name: "Vanguard Parking & General Services Corporation",
+    link: "https://www.masparc.com/columbus-garage/",
   },
   {
-    name: "Darcy's barbershop",
-    link: "",
+    name: "The 1854 Cycling Company",
+    link: "https://www.1854tech.com/",
   },
 ];

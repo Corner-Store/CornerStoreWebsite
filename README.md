@@ -19,6 +19,7 @@ Junia Janvier: Team Lead
 Backend: cd api; venv/bin/flask run --no-debugger
 Frontend: yarn start
 
+
 ## Jira Backlog
 
 ### Ordering of Backlog

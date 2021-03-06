@@ -76,6 +76,7 @@ The forecast for our first sprint is to complete 1 user story with the first inc
 
 - Solution Validation
   - Interviews (All Team Members - Junia, Joanna, Sophie, Amelia and Abdul)
+      - Interviews COMPLETE with each member completing 2-3 interviews (Junia, Abdul, Joanna, Sophie, Amelia)
   - Website for validation exercise (Joanna)
 - Github/Readme
   - Setting up Github/Readme (Sophie)
@@ -87,13 +88,15 @@ The forecast for our first sprint is to complete 1 user story with the first inc
 - Backlog (Ordered based on the user flow of consumers when navigating the app based on the feedback of interviews and validation)
   - Going into web app and seeing display of Black Owned Businesses and vendors (general info)
   - Seeing main page organized by categories with search engine (i.e. the UXD design)
-  -
+    -Abudl to add 13 businesses to server along with Sophie
 - Solution Validation
   - Finishing up interviews (Joanna and Amelia)
   - Hypothesis List (Junia)
   - Putting final touches on the mock website (Joanna & Sophie)
 - UXD Snapshots
   - Finish up snapshot - adjustments based on interview suggestions (Joanna)
+- Spotlight
+  - Team to finish slides for week and present 
 
 <br/>**Impediments:**
 

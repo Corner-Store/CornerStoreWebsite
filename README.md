@@ -32,7 +32,8 @@ The forecast for our first sprint is to complete 2 with the first including plot
 **During this scrum, we worked on developing our backlog, solution validations, and github/readme.**
 
 - Backlog
-  - Adding User stories to Jira Backlog (Amelia)
+  - There is a list of 50 businesses
+  - As a consumer, my immediate goal is to find BoBs and Vendors, thus I want to first see the main page with 50 amount of businesses listed on the main page so that I can see an organized directory of businesses and I don’t have to go through multiple websites. 
 - Solution Validation
   - Interviews (All Team Members - Junia, Joanna, Sophie, Amelia and Abdul)
   - Website for validation exercise (Joanna)
@@ -45,7 +46,8 @@ The forecast for our first sprint is to complete 2 with the first including plot
 
 - Backlog (Ordered based on the user flow of consumers when navigating the app based on the feedback of interviews and validation)
   - Going into web app and seeing display of Black Owned Businesses and vendors (general info)
-  - Seeing main page organized by categories with search engine (i.e. the UXD design)
+  - Seeing main page organized by categories with search engine (i.e. the UXD design) 
+  - 
 - Solution Validation
   - Finishing up interviews (Joanna and Amelia)
   - Hypothesis List (Junia)

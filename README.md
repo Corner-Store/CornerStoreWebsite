@@ -14,6 +14,11 @@ Junia Janvier: Team Lead
 <br/> Ha (Amelia) Nguyen: Technical Member
 <br/> Abdul Ka: Technical Member
 
+## How to Run Application
+
+Frontend: yarn start
+Backend: cd api; venv/bin/flask run --no-debugger
+
 ## Jira Backlog
 
 ### Ordering of Backlog

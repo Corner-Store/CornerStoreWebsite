@@ -1,6 +1,6 @@
 # Corner Store
 
-## About Us 
+## About Us
 
 CornerStore seeks to connect consumers through a network of Black Owned small businesses and vendors by creating an interactive website with specialized filters that allow for equitable results and the ability to see business information such as location, history, etc. Our solution would also allow for in-depth reviews.
 
@@ -17,8 +17,8 @@ Junia Janvier: Team Lead
 ## How to Run Application
 
 Backend: cd api; venv/bin/flask run --no-debugger
-Frontend: yarn start
 
+Frontend: yarn start
 
 ## Jira Backlog
 
@@ -38,45 +38,54 @@ The forecast for our first sprint is to complete 1 user story with the first inc
 **During this scrum, we worked on developing our backlog, solution validations, and github/readme. We didn't come across many impediments, just that we decided to focus our work on a more succint task of listing businesses, rather than including the backend database as well. Thus, we tasked our developers with the work of listing our first 25 businesses, with Abdul starting to look into the databases and how to link to flask. **
 
 - Backlog
+
   - There is a list of 25 businesses
+
     - As a consumer, my immediate goal is to find BoBs and Vendors, thus I want to first see the main page with 25 amount of businesses listed on the main page so that I can see an organized directory of businesses and I don’t have to go through multiple websites.
 
   - There is a list of 25 businesses part 2
+
     - As a consumer, my immediate goal is to find BoBs and Vendors, thus I want to first see the main page with 25 amount of businesses listed on the main page so that I can see an organized directory of businesses and I don’t have to go through multiple websites. However, this will be implemented on the server end.
 
   - These businesses can be searched by business name
+
     - As a consumer, my immediate goal is to find BoBs and Vendors, thus I want to first see the main page with a search bar to find my desired business by their name so that I can begin to sort through the businesses on the site.
 
   - These businesses are organized by category and can be searched by business name
+
     - As a consumer, my immediate goal is to find BoBs and Vendors specifically as it pertains to the type of business I want category of industry, thus I want to first see the main page with 25 amount of businesses sorted by the specific industry and an ability to search them by category on the main page so that I can see an organized directory of businesses and I don’t have to go through the entire list to find the desired business.
 
   - Include services in at least 25 businesses
+
     - As a consumer, my immediate goal is to find BoBs and Vendors specifically as it pertains to the type of business I want category of industry, thus I want to first see the main page with 50 amount of businesses sorted by the specific industry and an ability to search them by category on the main page so that I can see an organized directory of businesses and I don’t have to go through the entire list to find the desired business.
 
   - Filtering search results
+
     - As a consumer, my immediate goal is to find BoBs and Vendors specifically as it pertains to the type of business I want a category of industry, thus I want to first see the main search and an ability to search them by category on the main page followed by an ability to hone down my search based on particular type so that I can see an organized directory of businesses and I don’t have to go through the entire list to find the desired business.
 
   - Include a map of businesses that have a location
     - As a consumer, my goal is to also find out how to get to my chosen business thus I want to add a map with locations so that I can see a plotted map of businesses and I don’t have to go through the entire list to see how far they are and their location.
 
   -Can search for directions to business (i.e. similar to Google with transit options)
-    - s a consumer, my immediate goal is to find BoBs and Vendors specifically as it pertains to the location of the business, thus I want to further this goal by implementing directions so that I can navigate my way to a selected BoBs and if this business has no address their general area of service.
 
-    - Can filter results by location
-    - As a consumer, my immediate goal is to find BoBs and Vendors specifically as it pertains to the type of business I want a category of industry, thus I want to first see the main search and an ability to search them by category on the main page followed by an ability to hone down my search based on particular type so that I can see an organized directory of businesses and I don’t have to go through the entire list to find the desired business.
+  - s a consumer, my immediate goal is to find BoBs and Vendors specifically as it pertains to the location of the business, thus I want to further this goal by implementing directions so that I can navigate my way to a selected BoBs and if this business has no address their general area of service.
 
-    - Selecting a business profile page for more info
-    - As a consumer, I’d like to find business information at once, after making my selection in the search engine, thus I wanted to create profile pages so that businesses have their own space for their insights, history, contact, and inventory, and so I don’t have to see the minuscule info on the search page. 
+  - Can filter results by location
+  - As a consumer, my immediate goal is to find BoBs and Vendors specifically as it pertains to the type of business I want a category of industry, thus I want to first see the main search and an ability to search them by category on the main page followed by an ability to hone down my search based on particular type so that I can see an organized directory of businesses and I don’t have to go through the entire list to find the desired business.
+
+  - Selecting a business profile page for more info
+  - As a consumer, I’d like to find business information at once, after making my selection in the search engine, thus I wanted to create profile pages so that businesses have their own space for their insights, history, contact, and inventory, and so I don’t have to see the minuscule info on the search page.
 
   - On the profile page, add all relevant information
+
     - As a consumer, I’d like to find business information at once, after making my selection in the search engine, thus I wanted to create profile pages so that businesses have their own space for their insights, history, contact, and inventory, and so I don’t have to see the minuscule info on the search page.
 
   - Can see and add reviews for businesses
-    - As a consumer, I’d like to find business information at once, after making my selection in the search engine, thus I wanted to add reviews and the ability to add them so that I can access my decision to purchase. 
+    - As a consumer, I’d like to find business information at once, after making my selection in the search engine, thus I wanted to add reviews and the ability to add them so that I can access my decision to purchase.
 
 - Solution Validation
   - Interviews (All Team Members - Junia, Joanna, Sophie, Amelia and Abdul)
-      - Interviews COMPLETE with each member completing 2-3 interviews (Junia, Abdul, Joanna, Sophie, Amelia)
+    - Interviews COMPLETE with each member completing 2-3 interviews (Junia, Abdul, Joanna, Sophie, Amelia)
   - Website for validation exercise (Joanna)
 - Github/Readme
   - Setting up Github/Readme (Sophie)
@@ -96,7 +105,7 @@ The forecast for our first sprint is to complete 1 user story with the first inc
 - UXD Snapshots
   - Finish up snapshot - adjustments based on interview suggestions (Joanna)
 - Spotlight
-  - Team to finish slides for week and present 
+  - Team to finish slides for week and present
 
 <br/>**Impediments:**
 

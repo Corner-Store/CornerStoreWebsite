@@ -51,4 +51,52 @@ export const businessesJSON = [
     name: "The 1854 Cycling Company",
     link: "https://www.1854tech.com/",
   },
+  {
+    name: "Lawson Barbershop & Beauty",
+    link: "https://www.facebook.com/Lawsons-Barbershop-Beauty-Salon-303242936511811/?ref=py_c&eid=ARBn6htldWyBBaXAybJv9RBfCWCkX_nmN-vcW9MAx-hJ2O96Q_1tEYqKjO14P9RbvcV3zhqAxGpeWxwa",
+  },
+  {
+    name: "At Ease Barber Shop",
+    link: "https://https://www.ateasebarbershop.com/.com/",
+  },
+  {
+    name: "Elizabeth Djanwah",
+    link: "https://www.instagram.com/originalauntielizzy/?hl=en",
+  },
+  {
+    name: "MathTalk",
+    link: "http://mathtalkpbc.com/",
+  },
+  {
+    name: "G|Code Inc",
+    link: "https://www.thegcodehouse.com/",
+  },
+  {
+    name: "INSTITUTE FOR PAN AFRICAN CULTURAL EDUCATION,INC",
+    link: "http://paceachievement.org/index.html",
+  },
+  {
+    name: "Black Girl Nutrition",
+    link: "https://mailchi.mp/fddb4e91c7b3/join-the-black-girls-nutrition-movement",
+  },
+  {
+    name: "ANGEL CARE CLINIC, INC.",
+    link: "http://www.angelcareathome.com/",
+  },
+  {
+    name: "Sage Family Dental Boston",
+    link: "https://www.sagefamilydentalboston.com/",
+  },
+  {
+    name: "The Elite Nation Fitness",
+    link: "https://the-elite-nation-fitness.business.site/",
+  },
+  {
+    name: "The Wellness Collaborative, Inc.",
+    link: "https://thewellnesscollaborative.org/",
+  },
+  {
+    name: "The Williams Agency",
+    link: "http://thewilliamsagency.net/",
+  },
 ];

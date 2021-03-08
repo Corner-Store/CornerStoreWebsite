@@ -1,3 +1,6 @@
+import React from "react";
+
+
 export const businessesJSON = [
   {
     name: "Express Cuts 10.18",
@@ -96,7 +99,11 @@ export const businessesJSON = [
     link: "https://thewellnesscollaborative.org/",
   },
   {
-    name: "The Williams Agency",
-    link: "http://thewilliamsagency.net/",
+    name: "Skycom Courier",
+    link: "http://www.skycomcourier.com/",
+  },
+  {
+    name: "TrelleBlazers International Hairport",
+    link: "http://www.allthingstrelleblazer.com/",
   },
 ];

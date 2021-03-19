@@ -16,8 +16,17 @@ def get_connection():
 
 def get_all_business_names(connection):
     cur = connection.cursor()
-    cur.execute('SELECT "businessName" FROM public."Businesses";')
+    cur.execute('SELECT "Name of Business" FROM public."Businesses";')
     raw_rows = cur.fetchall()
     names = [raw_row[0] for raw_row in raw_rows]
     cur.close()
     return names
+
+
+def search(connection, input):
+    cur = connection.cursor()
+    cur.execute("SELECT 'Name of Business' FROM public.'Businesses' WHERE  'Name of Business' LIKE '%{}%';".format(input))
+    raw_rows = cur.fetchall()
+    businesses = [raw_row[0] for raw_row in raw_rows]
+    cur.close()
+    return businesses

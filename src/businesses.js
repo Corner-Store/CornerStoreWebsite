@@ -1,5 +1,4 @@
-import React from "react";
-
+//import React from "react";
 
 export const businessesJSON = [
   {
@@ -56,7 +55,8 @@ export const businessesJSON = [
   },
   {
     name: "Lawson Barbershop & Beauty",
-    link: "https://www.facebook.com/Lawsons-Barbershop-Beauty-Salon-303242936511811/?ref=py_c&eid=ARBn6htldWyBBaXAybJv9RBfCWCkX_nmN-vcW9MAx-hJ2O96Q_1tEYqKjO14P9RbvcV3zhqAxGpeWxwa",
+    link:
+      "https://www.facebook.com/Lawsons-Barbershop-Beauty-Salon-303242936511811/?ref=py_c&eid=ARBn6htldWyBBaXAybJv9RBfCWCkX_nmN-vcW9MAx-hJ2O96Q_1tEYqKjO14P9RbvcV3zhqAxGpeWxwa",
   },
   {
     name: "At Ease Barber Shop",
@@ -80,7 +80,8 @@ export const businessesJSON = [
   },
   {
     name: "Black Girl Nutrition",
-    link: "https://mailchi.mp/fddb4e91c7b3/join-the-black-girls-nutrition-movement",
+    link:
+      "https://mailchi.mp/fddb4e91c7b3/join-the-black-girls-nutrition-movement",
   },
   {
     name: "ANGEL CARE CLINIC, INC.",

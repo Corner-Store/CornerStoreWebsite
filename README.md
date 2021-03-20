@@ -27,7 +27,7 @@ Frontend: yarn start
 - We are ordering the backlog based on what information we have and which are accomplishable without the assistance of another component to test the functionality (ie. having the database set up before developing a filter).
   <br/>https://buspark.atlassian.net/jira/software/projects/CP/boards/16
 
-## Sprint Planning
+## Sprint Planning 
 
 The forecast for our second sprint is to complete 1 user story with the first including plotting the intitial businesses and vendors. Due to the search and filtering to be closely tied, we decided to hold off on this to ensure that we can focus on developing our database as a team collective in the following sprint.
 

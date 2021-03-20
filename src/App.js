@@ -1,24 +1,19 @@
 import "./App.css";
+import { businessesJSON } from "./businesses";
 
-const businessesJSON = [
-  {
-    name: "Business 1",
-    link: "",
-  },
-  {
-    name: "Business 2",
-    link: "",
-  },
-];
 function App() {
   return (
     <div className="App">
       <h1>Welcome to Corner Store</h1>
-      {businessesJSON.map((item, index) => (
-        <p>
-          <a href={item.link}>{item.name}</a>
-        </p>
-      ))}
+      <ul data-testid="item-list-businesses">
+        {businessesJSON.map((item, index) => (
+          <li key={index} className="list-item" data-testid="single-item">
+            <a href={item.link} data-testid="display-businesses">
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -181,3 +181,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Database Configuration
+
+To configure the project to connect to the database, you must first install psycopg2. If your project is in a virtual environment, remember to install the package inside the environment.
+
+To install psycopg2, you must first install psycopg2-binary:
+
+`pip install psycopg2-binary`
+
+Next, install psycopg2:
+
+`pip install psycopg2`
+
+Installing psycopg2 will allow you to run the database connection code locally on your machine. However, the code still needs access to the database credentials to work correctly. To supply the credentials to the code, you need to add them as environment variables on your machine. The instructions on how to add environment variables on Windows OS can be found here: https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html
+
+There are 3 variables to add, and their names must exactly match the variable names used in the code: DB_URL, DB_USERNAME, DB_PASSWORD.

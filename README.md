@@ -6,7 +6,7 @@ CornerStore seeks to connect consumers through a network of Black Owned small bu
 
 Our goal is better to understand how we can best improve the user experience of finding Black-Owned Businesses in their area, that both fulfills them being socially conscious and supportive of a cause while having access to quality products and services.
 
-## Meet the Team
+## Meet the Team  
 
 Junia Janvier: Team Lead
 <br/> Joanna Jung: UI/UX Designer
@@ -29,13 +29,17 @@ Frontend: yarn start
 
 ## Sprint Planning
 
-The forecast for our first sprint is to complete 1 user story with the first including plotting the intitial businesses and vendors. Due to the search and filtering to be closely tied, we decided to hold off on this to ensure that we can focus on developing our database as a team collective in the following sprint.
+The forecast for our second sprint is to complete 1 user story with the first including plotting the intitial businesses and vendors. Due to the search and filtering to be closely tied, we decided to hold off on this to ensure that we can focus on developing our database as a team collective in the following sprint.
 
 ## Daily Scrums
 
 ### Daily Scrum #1
 
-**During this scrum, we worked on developing our backlog, solution validations, and github/readme. We didn't come across many impediments, just that we decided to focus our work on a more succint task of listing businesses, rather than including the backend database as well. Thus, we tasked our developers with the work of listing our first 25 businesses, with Abdul starting to look into the databases and how to link to flask. **
+**During this scrum, we didn't come across many impediments, just that we decided to focus our work on a more succint task of listing businesses, rather than including the backend database as well, we now are focusing on how to set up our database for Sprint 3, and we'll be meeting with Nathan to help us set up. We completed adding our 26 businesses, linking them to a main page (server-side, and boxing the links to distinguish the businesses from each other). We also included a title.**
+
+## Mob Programming/ Test-Driven Development
+- Mob Programming: http://cs-people.bu.edu/jjanvier/Jira/2021-03-06.png 
+- Test driven: http://cs-people.bu.edu/jjanvier/Jira/2021-03-08%20(4).png 
 
 - Backlog
 
@@ -83,33 +87,24 @@ The forecast for our first sprint is to complete 1 user story with the first inc
   - Can see and add reviews for businesses
     - As a consumer, I’d like to find business information at once, after making my selection in the search engine, thus I wanted to add reviews and the ability to add them so that I can access my decision to purchase.
 
-- Solution Validation
-  - Interviews (All Team Members - Junia, Joanna, Sophie, Amelia and Abdul)
-    - Interviews COMPLETE with each member completing 2-3 interviews (Junia, Abdul, Joanna, Sophie, Amelia)
-  - Website for validation exercise (Joanna)
-- Github/Readme
-  - Setting up Github/Readme (Sophie)
-- UXD Snapshots
-  - Working on next snapshot after Lo-Fi Wireframes (Joanna)
+
 
 <br/>**Activities for Upcoming Week**
 
 - Backlog (Ordered based on the user flow of consumers when navigating the app based on the feedback of interviews and validation)
-  - Going into web app and seeing display of Black Owned Businesses and vendors (general info)
-  - Seeing main page organized by categories with search engine (i.e. the UXD design)
-    -Abudl to add 13 businesses to server along with Sophie
-- Solution Validation
-  - Finishing up interviews (Joanna and Amelia)
-  - Hypothesis List (Junia)
-  - Putting final touches on the mock website (Joanna & Sophie)
-- UXD Snapshots
-  - Finish up snapshot - adjustments based on interview suggestions (Joanna)
-- Spotlight
-  - Team to finish slides for week and present
+
 
 <br/>**Impediments:**
 
-- Tech Stack: Still in discussion, will be following up with mentors
+- Pulling DB to the server, must run two terminals at once, awaiting update
+
+# Sprint Review
+- Our produce is a working product, as it takes one to business links. Two stakeholders were present in the desing review (Team Lead (Junia) Developer (Abdul)).
+ - http://cs-people.bu.edu/jjanvier/Jira/2021-03-08%20(2).png
+ - https://github.com/Corner-Store/cornerstore/tree/main  (No hosting set up yet, but here's proof of code)
+ 
+# Sprint Retrospective
+- Being more intentional in how we divy up tasks, having more team performance check-ins. 
 
 # Getting Started with Create React App
 

@@ -3,11 +3,11 @@ from flask import Flask, request, jsonify
 import db
 
 #Temporary code: to be changed later
-
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
-
-@app.route('/time')
+@app.route('/')
 def get_current_time():
 	return {'time': time.time()}
 
@@ -25,9 +25,8 @@ def get_all_business_names():
 def search():
 	try:
 		connection = db.get_connection()
-		searchInput = request.json
+		searchInput = request.form['input']
 		businesses = db.search(connection, searchInput)
-		console.log(businesses)
 		return jsonify(businesses)
 	except Exception as e:
 		return {'error': str(e)}

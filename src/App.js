@@ -1,11 +1,13 @@
 import "./App.css";
-import { businessesJSON } from "./businesses";
+//import { businessesJSON } from "./businesses";
+import SearchBusiness from "./Search.js";
 
 function App() {
   return (
     <div className="App">
       <h1>Welcome to Corner Store</h1>
-      <ul data-testid="item-list-businesses">
+      <SearchBusiness />
+      {/* <ul data-testid="item-list-businesses">
         {businessesJSON.map((item, index) => (
           <li key={index} className="list-item" data-testid="single-item">
             <a href={item.link} data-testid="display-businesses">
@@ -13,7 +15,7 @@ function App() {
             </a>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }

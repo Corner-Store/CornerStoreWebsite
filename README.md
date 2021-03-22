@@ -35,7 +35,7 @@ The forecast for our second sprint is to complete 1 user story with the first in
 
 ### Daily Scrum #1
 
-**During this scrum, we didn't come across many impediments, just that we decided to focus our work on a more succint task of listing businesses, rather than including the backend database as well, we now are focusing on how to set up our database for Sprint 3, and we'll be meeting with Nathan to help us set up. We completed adding our 26 businesses, linking them to a main page (server-side, and boxing the links to distinguish the businesses from each other). We also included a title.**
+**During this scrum, we didn't come across many impediments, just that we decided to focus our work on a more succint task of listing businesses, rather than including the backend database as well, we now are focusing on how to set up our database for Sprint 4, and we'll be meeting with Nathan to help us set up. We completed adding our 26 (now 35) businesses, linking them to a main page (server-side, and boxing the links to distinguish the businesses from each other). We also included a title, as a means to showcase incremental steps, as our focus for this past week was to set up our database, and environment.**
 
 ## Mob Programming/ Test-Driven Development
 - Mob Programming: http://cs-people.bu.edu/jjanvier/Jira/2021-03-06.png 
@@ -78,14 +78,6 @@ The forecast for our second sprint is to complete 1 user story with the first in
   - Can see and add reviews for businesses
     - As a consumer, I’d like to find business information at once, after making my selection in the search engine, thus I wanted to add reviews and the ability to add them so that I can access my decision to purchase. 
 
-- Solution Validation
-  - Interviews (All Team Members - Junia, Joanna, Sophie, Amelia and Abdul)
-      - Interviews COMPLETE with each member completing 2-3 interviews (Junia, Abdul, Joanna, Sophie, Amelia)
-  - Website for validation exercise (Joanna)
-- Github/Readme
-  - Setting up Github/Readme (Sophie)
-- UXD Snapshots
-  - Working on next snapshot after Lo-Fi Wireframes (Joanna)
 
 <br/>**Activities for Upcoming Week**
 
@@ -101,7 +93,7 @@ The forecast for our second sprint is to complete 1 user story with the first in
 
 <br/>**Impediments:**
 
-- Pulling DB to the server, must run two terminals at once, awaiting update
+- Pulling DB to the server, must run two terminals at once, awaiting update (also for following sprint)
 
 # Sprint Review
 - Our produce is a working product, as it takes one to business links. Two stakeholders were present in the desing review (Team Lead (Junia) Developer (Abdul)).

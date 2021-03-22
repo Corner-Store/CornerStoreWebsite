@@ -1,0 +1,18 @@
+{
+  "categories":{
+    "businesses": [
+      {
+        "name":"Crowned by Glory Studios",
+        "category":"Beauty",
+        "image":"barber.png",
+        "url":"http://www.crownedbyglory.com/"
+      },
+      {
+        "title":"Vanguard Parking & General Services Corporation",
+        "category":"Services",
+        "image":"retail.png",
+        "url":"https://www.masparc.com/columbus-garage/"
+      }
+    ]
+  }
+}

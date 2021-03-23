@@ -26,7 +26,7 @@ def get_all_business_names():
 def search():
 	try:
 		connection = db.get_connection()
-		searchInput = request.form['input']
+		searchInput = request.form['search']
 		businesses = db.search(connection, searchInput.lower())
 		print(jsonify(results =businesses))
 		return jsonify(businesses)

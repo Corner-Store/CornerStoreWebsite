@@ -27,7 +27,6 @@ def search(connection, input):
     cur = connection.cursor()
     sql ='SELECT "Name of Business" FROM public."Businesses" WHERE lower("Name of Business") LIKE  %s;'
     arg = "%{}%".format(input)
-    print(arg)
     cur.execute(sql,(arg,))
     raw_rows = cur.fetchall()
     businesses = [raw_row[0] for raw_row in raw_rows]

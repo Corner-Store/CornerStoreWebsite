@@ -1,4 +1,5 @@
 import React from "react";
+import "./Search.css";
 
 class SearchBusiness extends React.Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class SearchBusiness extends React.Component {
     this.state = {
       search: "",
       businesssesFound: [],
+      itemSearch: false,
     };
     this.handleFilter = this.handleFilter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,7 +30,7 @@ class SearchBusiness extends React.Component {
         return response.json();
       })
       .then((json) => {
-        this.setState({ businesssesFound: Array.from(json) });
+        this.setState({ businesssesFound: Array.from(json), itemSearch: true });
       });
     event.preventDefault();
   }
@@ -45,9 +47,14 @@ class SearchBusiness extends React.Component {
           />
           <input type="submit" value="Search" />
         </form>
-        {this.state.businesssesFound.map((data) => (
-          <p>{data}</p>
-        ))}
+        <div class={this.state.itemSearch ? "container" : ""}>
+          {this.state.businesssesFound.map((data, index) => (
+            <p key={index} class="businesses-container">
+              {data[0]}
+              <p>{data[1]}</p>
+            </p>
+          ))}
+        </div>
       </div>
     );
   }

@@ -37,14 +37,3 @@
     transform: rotate(360deg);
   }
 }
-li {
-  list-style-type: none;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 14px;
-  text-align: center;
-}
-ul {
-  list-style-type: none;
-}

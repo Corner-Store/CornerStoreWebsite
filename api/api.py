@@ -4,7 +4,7 @@ import db
 import os
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 
 
 # Sets "NODE_ENV" to "production"
@@ -13,8 +13,8 @@ DEBUG = True if not IS_PRODUCTION else False
 PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
 
 @app.route('/')
-def display():
-	return {"render_template('../src/index.js')"}
+def index():
+	return  app.send_static_file('index.html')
 
 
 @app.route('/businesses')

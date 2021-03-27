@@ -3,10 +3,9 @@ from flask import Flask, request, jsonify, render_template
 import db
 import os
 
-#Temporary code: to be changed later
-from flask_cors import CORS
+
 app = Flask(__name__)
-CORS(app)
+
 
 # Sets "NODE_ENV" to "production"
 IS_PRODUCTION = os.environ.get('NODE_ENV') == 'production'
@@ -15,7 +14,7 @@ PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
 
 @app.route('/')
 def display():
-	return render_template('../src/index.js')
+	return {"render_template('../src/index.js')"}
 
 
 @app.route('/businesses')

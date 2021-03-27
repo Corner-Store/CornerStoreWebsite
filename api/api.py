@@ -8,9 +8,9 @@ app = Flask(__name__,static_folder='../build', static_url_path='/')
 
 
 # Sets "NODE_ENV" to "production"
-# IS_PRODUCTION = os.environ.get('NODE_ENV') == 'production'
+IS_PRODUCTION = os.environ.get('NODE_ENV') == 'production'
 # DEBUG = True if not IS_PRODUCTION else False
-# PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
+PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
 
 @app.route('/')
 def index():
@@ -45,4 +45,4 @@ def not_found(e):
 	return app.send_static_file('index.html')
 
 if __name__=="__main__":
-    app.run(debug=False, host='0.0.0.0', port=os.environ.get('PORT',80))
+    app.run(debug=False, host='0.0.0.0', port=PORT)

@@ -8,9 +8,9 @@ app = Flask(__name__, static_folder='../build', static_url_path='/')
 
 
 # Sets "NODE_ENV" to "production"
-IS_PRODUCTION = os.environ.get('NODE_ENV') == 'production'
-DEBUG = True if not IS_PRODUCTION else False
-PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
+# IS_PRODUCTION = os.environ.get('NODE_ENV') == 'production'
+# DEBUG = True if not IS_PRODUCTION else False
+# PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
 
 @app.route('/')
 def index():

@@ -1,5 +1,5 @@
 import time
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import db
 import os
 

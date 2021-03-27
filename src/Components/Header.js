@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 class Header extends Component {
   render() {
-
-
     return (
       <header id="home">
-
         <div class="navbar">
-          <a href="#home">Home</a>
+          <a>
+            <Link to="/">Home</Link>
+          </a>
           <a href="#news">About</a>
           <div class="dropdown">
-            <button class="dropbtn">Categories
+            <button class="dropbtn">
+              Categories
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
@@ -38,7 +38,7 @@ class Header extends Component {
             </div>
           </div>
         </div>
-   </header>
+      </header>
     );
   }
 }

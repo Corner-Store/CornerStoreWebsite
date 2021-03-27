@@ -7,7 +7,6 @@ import CategoryBar from './Components/CategoryBar';
 import SearchCategories from './Components/SearchCategories_Industries';
 
 import "./layoutMain.css";
-//import { businessesJSON } from "./businesses";
 
 class App extends Component {
 
@@ -49,17 +48,6 @@ class App extends Component {
                  <h1>Welcome to Corner Store</h1>
                    <SearchBusiness />
                    <SearchCategories />
-             {/* <ul data-testid="item-list-businesses">
-               {businessesJSON.map((item, index) => (
-                 <li key={index} className="list-item" data-testid="single-item">
-                   <a href={item.link} data-testid="display-businesses">
-                     {item.name}
-                   </a>
-                 </li>
-               ))}
-             </ul> */
-             }
-
              <div></div>
        </div>
     );

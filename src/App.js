@@ -4,6 +4,8 @@ import $ from 'jquery';
 import Header from './Components/Header';
 import SearchBusiness from "./Components/Search";
 import CategoryBar from './Components/CategoryBar';
+import SearchCategories from './Components/SearchCategories_Industries';
+
 import "./layoutMain.css";
 //import { businessesJSON } from "./businesses";
 
@@ -46,6 +48,7 @@ class App extends Component {
         <Header data={this.state.cornerstoreData.main}/>
                  <h1>Welcome to Corner Store</h1>
                    <SearchBusiness />
+                   <SearchCategories />
              {/* <ul data-testid="item-list-businesses">
                {businessesJSON.map((item, index) => (
                  <li key={index} className="list-item" data-testid="single-item">
@@ -58,8 +61,6 @@ class App extends Component {
              }
 
              <div></div>
-             <CategoryBar data={this.state.cornerstoreData.main}/>
-
        </div>
     );
   }

@@ -19,6 +19,8 @@
     "build-react": "react-scripts start",
     "build-flask": "cd api && venv/bin/flask run --no-debugger",
     "build": "react-scripts build",
+    "heroku-prebuild": "npm install -f",
+    "heroku-postbuild": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -39,7 +39,7 @@ class SearchBusiness extends React.Component {
       <div>
         <form
           onSubmit={this.handleSubmit}
-          action="http://localhost:5000/search"
+          action="/search"
           method="post"
         >
           <input

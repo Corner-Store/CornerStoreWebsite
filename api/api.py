@@ -14,7 +14,7 @@ PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
 
 @app.route('/')
 def index():
-	return  app.send_static_file('index.html')
+	return app.send_static_file('index.html')
 
 
 @app.route('/businesses')

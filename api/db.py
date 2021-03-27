@@ -25,12 +25,12 @@ def get_all_business_names(connection):
 #Return a list of possible businesses based on name of business
 def search(connection, input):
     cur = connection.cursor()
-    cur.execute('SELECT "Name of Business" FROM public."Businesses" WHERE lower("Name of Business") LIKE ' + "'%{}%';".format(input))
+    sql ='SELECT "Name of Business", "Industry" FROM public."Businesses" WHERE lower("Name of Business") LIKE  %s OR lower("Industry") LIKE %s;'
+    arg = "%{}%".format(input)
+    cur.execute(sql,(arg,arg))
     raw_rows = cur.fetchall()
-    print('SELECT "Name of Business" FROM public."Businesses" WHERE "Name of Business" LIKE ' + "'%{}%';".format(input))
-    businesses = [raw_row[0] for raw_row in raw_rows]
     cur.close()
-    return businesses
+    return raw_rows
 
 #Get a list of distinct industries
 #Add this list into the dropdown

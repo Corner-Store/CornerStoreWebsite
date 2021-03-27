@@ -4,7 +4,7 @@ import db
 import os
 
 
-app = Flask(__name__, static_folder='../build', static_url_path='/')
+app = Flask(__name__)
 
 
 # Sets "NODE_ENV" to "production"
@@ -35,5 +35,10 @@ def search():
 		return jsonify(businesses)
 	except Exception as e:
 		return {'error': str(e)}
+
+@app.errorhandler(404)
+def not_found(e):
+	return app.send_static_file('index.html')
+
 if __name__=="__main__":
-    app.run(debug=DEBUG, host='0.0.0.0', port=PORT)
+    app.run(debug=False, host='0.0.0.0', port=os.environ.get('PORT',80))

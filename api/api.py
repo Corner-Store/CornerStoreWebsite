@@ -7,6 +7,11 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+# Sets "NODE_ENV" to "production"
+IS_PRODUCTION = os.environ.get('NODE_ENV') == 'production'
+DEBUG = True if not IS_PRODUCTION else False
+PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
+
 @app.route('/')
 def display():
 	return render_template('index.html')
@@ -31,5 +36,4 @@ def search():
 	except Exception as e:
 		return {'error': str(e)}
 if __name__=="__main__":
-	const port = process.env.PORT || 3000
     app.run(debug=DEBUG, host='0.0.0.0', port=PORT)

@@ -31,4 +31,5 @@ def search():
 	except Exception as e:
 		return {'error': str(e)}
 if __name__=="__main__":
+	const port = process.env.PORT || 3000
     app.run(debug=DEBUG, host='0.0.0.0', port=PORT)

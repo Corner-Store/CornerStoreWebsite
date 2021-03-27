@@ -18,7 +18,7 @@ class SearchBusiness extends React.Component {
   handleSubmit(event) {
     console.log("Request to backend");
 
-    fetch("http://localhost:5000/search", {
+    fetch("/search", {
       method: "POST",
       cache: "no-cache",
       headers: {

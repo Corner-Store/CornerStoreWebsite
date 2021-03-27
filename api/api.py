@@ -1,6 +1,7 @@
 import time
 from flask import Flask, request, jsonify
 import db
+import os
 
 #Temporary code: to be changed later
 from flask_cors import CORS

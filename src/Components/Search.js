@@ -1,12 +1,18 @@
 import React from "react";
 import "../layoutMain.css";
+import { withRouter, Redirect } from "react-router-dom";
+
+
 class SearchBusiness extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       search: "",
-      businesssesFound: [],
+      location:"",
+      businessNames: [],
       itemSearch: false,
+      invalidInput: false,
+    
     };
     this.handleFilter = this.handleFilter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,47 +22,58 @@ class SearchBusiness extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log("Request to backend");
-    let data = new FormData();
-    data.append("search", this.state.search);
-    let requestSearch = {
-      method: "POST",
-      header: { content_type: "application/json" },
-      body: data,
-    };
-    fetch("http://localhost:5000/search", requestSearch)
-      .then((response) => {
-        return response.json();
-      })
-      .then((json) => {
-        this.setState({ businesssesFound: Array.from(json), itemSearch: true });
-      });
-    event.preventDefault();
+    if (this.state.search.length > 0) {
+      console.log("Request to backend");
+      let data = new FormData();
+      data.append("search", this.state.search);
+      let requestSearch = {
+        method: "POST",
+        header: { content_type: "application/json" },
+        body: data,
+      };
+      fetch("http://localhost:5000/search", requestSearch)
+        .then((response) => {
+          return response.json();
+        })
+        .then((json) => {
+          this.setState({ businessNames: Array.from(json), itemSearch: true });
+        });
+      event.preventDefault();
+    } else {
+      this.setState({ invalidInput: true });
+    }
   }
 
   render() {
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit} action="">
-          <input
+    if (this.state.itemSearch) {
+      return (
+        <Redirect
+          to={{
+            pathname: "/businesses",
+            state: { businesses: this.state.businessNames },
+          }}
+        />
+      );
+    } else {
+      return (
+        <div>
+          <form onSubmit={this.handleSubmit} action="">
+            <input
+              type="text"
+              placeholder="I'm Looking For:"
+              value={this.state.search}
+              onChange={this.handleFilter}
+            />
+            <input 
             type="text"
-            placeholder="Search for Businesses..."
-            value={this.state.search}
-            onChange={this.handleFilter}
-          />
-          <input type="submit" value="Search" />
-        </form>
-        <div class={this.state.itemSearch ? "container" : ""}>
-          {this.state.businesssesFound.map((data, index) => (
-            <p key={index} class="businesses-container">
-              {data[0]}
-              <p>{data[1]}</p>
-            </p>
-          ))}
+            placeholder="Where to:"
+            value={this.state.location}/>
+            <input type="submit" value="Search" />
+          </form>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
-export default SearchBusiness;
+export default withRouter(SearchBusiness);

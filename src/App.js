@@ -3,7 +3,6 @@ import ReactGA from 'react-ga';
 import $ from 'jquery';
 import Header from './Components/Header';
 import SearchBusiness from "./Components/Search";
-import CategoryBar from './Components/CategoryBar';
 import SearchCategories from './Components/SearchCategories_Industries';
 
 import "./layoutMain.css";
@@ -48,6 +47,9 @@ class App extends Component {
         <Header data={this.state.cornerstoreData.main}/>
                  <h1>Welcome to Corner Store</h1>
                    <SearchBusiness />
+                   <p></p>
+
+                   <p></p>
                    <SearchCategories />
              {/* <ul data-testid="item-list-businesses">
                {businessesJSON.map((item, index) => (

@@ -25,7 +25,7 @@ class SearchCategories extends Component {
     this.setState({selectOptions: options})
 
   }
-
+// Get names of business in catergories
   async getBusinessNames(industry) {
     const res = await axios.get('http://localhost:5000/industries/' + industry + '/businesses')
     const data = res.data
@@ -52,9 +52,13 @@ class SearchCategories extends Component {
     console.log(this.state.selectOptions)
     return (
       <div>
-        <Select options={this.state.selectOptions} onChange={this.handleChange.bind(this)} />
+        <Select
+            name = "Top Categories"
+            options={this.state.selectOptions}
+            onChange={this.handleChange.bind(this)}
+        />
 
-        <p>You have selected <strong>{this.state.name}</strong> </p>
+        <p>You selected <strong>{this.state.name}</strong> category </p>
         {businessList}
       </div>
     )

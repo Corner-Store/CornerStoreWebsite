@@ -1,0 +1,18 @@
+import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+import SearchBox from './SearchBox'
+import '@testing-library/jest-dom/extend-expect'
+
+describe('Input value', () => {
+    it('updates on change', () => {
+      const setSearch = jest.fn((value) => {})
+      
+      const { queryByPlaceholderText } = render(<SearchBox setSearch={setSearch}/>)
+  
+      const searchInput = queryByPlaceholderText('Search...')
+  
+      fireEvent.change(searchInput, { target: { value: 'test' } })
+  
+      expect(searchInput.value).toBe('test')
+    })
+  })

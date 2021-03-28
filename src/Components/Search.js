@@ -33,9 +33,11 @@ class SearchBusiness extends React.Component {
       };
       fetch("http://localhost:5000/search", requestSearch)
         .then((response) => {
+          console.log(response);
           return response.json();
         })
         .then((json) => {
+          console.log(json);
           this.setState({ businessNames: Array.from(json), itemSearch: true });
         });
       event.preventDefault();

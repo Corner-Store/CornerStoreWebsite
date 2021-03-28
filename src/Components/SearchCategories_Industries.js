@@ -16,7 +16,7 @@ class SearchCategories extends Component {
   async getOptions() {
     const res = await axios.get("http://localhost:5000/industries");
     const data = res.data;
-
+    console.log(data);
     const options = data.map((industry) => ({
       value: industry,
       label: industry,

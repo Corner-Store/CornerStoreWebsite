@@ -29,19 +29,7 @@ class SearchCategories extends Component {
       "http://localhost:5000/industries/" + industry + "/businesses"
     );
     const data = res.data;
-    this.setState({ businessNames: data, redirectPage: true });
-  }
-
-  handleChange(e) {
-    this.setState({ id: e.value, name: e.label });
-    this.getBusinessNames(e.value);
-  }
-
-  componentDidMount() {
-    this.getOptions();
-  }
-
-  render() {
+    this.setState({ businessNames: data });
     if (
       this.state.businessNames &&
       this.state.businessNames.length &&
@@ -49,6 +37,18 @@ class SearchCategories extends Component {
     ) {
       this.props.handleResults(this.state.businessNames);
     }
+  }
+
+  handleChange(e) {
+    this.setState({ id: e.value, name: e.label });
+    this.getBusinessNames(e.value);
+  }
+
+  componentWillMount() {
+    this.getOptions();
+  }
+
+  render() {
     return (
       <div>
         <Select

@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      results: [],
+      results: null,
       redirectPage: false,
     };
     this.handleResults = this.handleResults.bind(this);
@@ -23,7 +23,7 @@ class App extends Component {
         <Redirect
           to={{
             pathname: "/businesses",
-            state: { results: this.state.results },
+            state: { data: this.state.results },
           }}
         />
       );

@@ -20,6 +20,9 @@ Backend: cd api; venv/bin/flask run --no-debugger
 
 Frontend: yarn start
 
+## All Sprints:
+
+https://docs.google.com/document/d/1JtmBw63qlJ00GQZ1diCL6cJwsponV_IuG9opmMc0dDk/edit?usp=sharing
 
 ## Jira Backlog
 

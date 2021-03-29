@@ -1,26 +1,27 @@
 import React from "react";
 import "../layoutMain.css";
-import { withRouter, Redirect } from "react-router-dom";
-
 
 class SearchBusiness extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       search: "",
-      location:"",
-      businessNames: [],
-      itemSearch: false,
+      location: "",
+      businessNames: null,
+      itemSearch: "",
       invalidInput: false,
-    
     };
     this.handleFilter = this.handleFilter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleLocation = this.handleLocation.bind(this);
   }
   handleFilter(event) {
     this.setState({ search: event.target.value });
   }
 
+  handleLocation(event) {
+    this.setState({ location: event.target.value });
+  }
   handleSubmit(event) {
     if (this.state.search.length > 0) {
       console.log("Request to backend");
@@ -37,6 +38,7 @@ class SearchBusiness extends React.Component {
         })
         .then((json) => {
           this.setState({ businessNames: Array.from(json), itemSearch: true });
+          this.props.handleResults(this.state.businessNames);
         });
       event.preventDefault();
     } else {
@@ -45,35 +47,26 @@ class SearchBusiness extends React.Component {
   }
 
   render() {
-    if (this.state.itemSearch) {
-      return (
-        <Redirect
-          to={{
-            pathname: "/businesses",
-            state: { businesses: this.state.businessNames },
-          }}
-        />
-      );
-    } else {
-      return (
-        <div>
-          <form onSubmit={this.handleSubmit} action="">
-            <input
-              type="text"
-              placeholder="I'm Looking For:"
-              value={this.state.search}
-              onChange={this.handleFilter}
-            />
-            <input 
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit} action="">
+          <input
+            type="text"
+            placeholder="I'm Looking For:"
+            value={this.state.search}
+            onChange={this.handleFilter}
+          />
+          <input
             type="text"
             placeholder="Where to:"
-            value={this.state.location}/>
-            <input type="submit" value="Search" />
-          </form>
-        </div>
-      );
-    }
+            value={this.state.location}
+            onChange={this.handleLocation}
+          />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
+    );
   }
 }
 
-export default withRouter(SearchBusiness);
+export default SearchBusiness;

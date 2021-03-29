@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Select from "react-select";
 import axios from "axios";
-import { withRouter, Redirect } from "react-router-dom";
 
 class SearchCategories extends Component {
   constructor(props) {
@@ -30,7 +29,7 @@ class SearchCategories extends Component {
       "http://localhost:5000/industries/" + industry + "/businesses"
     );
     const data = res.data;
-    this.setState({ businessNames: data });
+    this.setState({ businessNames: data, redirectPage: true });
   }
 
   handleChange(e) {
@@ -43,40 +42,22 @@ class SearchCategories extends Component {
   }
 
   render() {
-    // const businessList = this.state.businessNames && this.state.businessNames.length && this.state.businessNames.length > 0 ? (
-    //   <ul>
-    //     {this.state.businessNames.map(name => <li>{name}</li>)}
-    //   </ul>
-    // ) : null
-
-    // console.log(this.state.selectOptions)
     if (
       this.state.businessNames &&
       this.state.businessNames.length &&
       this.state.businessNames.length > 0
     ) {
-      return (
-        <Redirect
-          to={{
-            pathname: "/businesses",
-            state: { businesses: this.state.businessNames },
-          }}
-        />
-      );
-    } else {
-      return (
-        <div>
-          <Select
-            options={this.state.selectOptions}
-            onChange={this.handleChange.bind(this)}
-          />
-          {/* 
-        <p>You have selected <strong>{this.state.name}</strong> </p>
-        {businessList} */}
-        </div>
-      );
+      this.props.handleResults(this.state.businessNames);
     }
+    return (
+      <div>
+        <Select
+          options={this.state.selectOptions}
+          onChange={this.handleChange.bind(this)}
+        />
+      </div>
+    );
   }
 }
 
-export default withRouter(SearchCategories);
+export default SearchCategories;

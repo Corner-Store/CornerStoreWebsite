@@ -48,21 +48,25 @@ class SearchBusiness extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar-box">
         <form onSubmit={this.handleSubmit} action="">
           <input
             type="text"
             placeholder="I'm Looking For:"
             value={this.state.search}
             onChange={this.handleFilter}
+            className="right-search-outline "
           />
+          <data className="vertical-line" />
           <input
             type="text"
             placeholder="Where to:"
             value={this.state.location}
             onChange={this.handleLocation}
+            className="left-search-outline "
           />
-          <input type="submit" value="Search" />
+          <data className="vertical-line" />
+          <input type="submit" value="Search" className="search-button" />
         </form>
       </div>
     );

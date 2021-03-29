@@ -1,12 +1,13 @@
 /* ------------------------------------------------------------------ */
 /* Home Screen
 /* ------------------------------------------------------------------ */
-.home-container{
-  /* background: url('/images/home-background.png') center center/cover no-repeat;
-  height: 100vh;
+.home-container {
+  background: url("http://localhost:3000/images/home-background.png") center
+    center/cover no-repeat;
+  height: 50vh;
   width: 100%;
   display: flex;
-  flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   object-fit: contain;
@@ -17,7 +18,6 @@
 /* ------------------------------------------------------------------ */
 
 .App {
-  padding-top: 50px;
   text-align: center;
 }
 
@@ -61,6 +61,7 @@ body {
 }
 
 /* Display search */
+
 .container {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.8);
@@ -74,6 +75,46 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.8);
   font-size: 20px;
   text-align: center;
+}
+
+.right-search-outline {
+  margin: 0px 5vw 0px 1vw;
+  width: 15vw;
+  font-size: 2vw;
+  border: none;
+  outline: none;
+}
+
+.left-search-outline {
+  margin: 0px 0px 0px 1vw;
+  width: 15vw;
+  font-size: 2vw;
+  border: none;
+  outline: none;
+}
+.search-bar-box {
+  border: 1px solid #000000;
+  height: 4vw;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 1px 3px 5px #8b8b8b;
+  white-space: nowrap;
+}
+.search-button {
+  background-color: #ffffff;
+  height: 20%;
+  margin: 0px 0px 0px 1vw;
+  font-size: 2vw;
+  width: fit-content;
+  border: none;
+  outline: none;
+}
+.vertical-line {
+  border-left: 1px solid #000000;
+  font-size: 2.5vw;
 }
 
 span {
@@ -95,7 +136,7 @@ body {
 /* Navbar container */
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #ffffbf;
   font-family: Arial;
 }
 
@@ -103,7 +144,24 @@ body {
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Navbar container */
+.navbarsearch {
+  overflow: hidden;
+  background-color: #ffffff;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbarsearch a {
+  float: left;
+  font-size: 16px;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -130,7 +188,7 @@ body {
 /* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: lightgray;
 }
 
 /* Dropdown content (hidden by default) */

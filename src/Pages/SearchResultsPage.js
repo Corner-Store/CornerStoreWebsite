@@ -7,26 +7,17 @@ class SearchResultsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      results: null,
+      results: this.props.location.state.data,
     };
     this.handleResults = this.handleResults.bind(this);
   }
-  componentWillReceiveProps(props) {
-    if (props === undefined) {
-      this.setState({ results: props.location.state.results });
-    }
-  }
 
   handleResults(results) {
-    if (results != null) {
-      this.setState({ results: results });
-    }
+    this.setState({ results: results });
   }
   render() {
     return (
       <div>
-        <span />
-        <SearchBusiness handleResults={this.handleResults} />
         <span />
         {this.state.results !== null ? (
           <DisplayBusinesses results={this.state.results} />

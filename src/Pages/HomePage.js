@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "../Components/Header";
 import SearchBusiness from "../Components/SearchBusinesses";
 import SearchCategories from "../Components/SearchCategories_Industries";
 import { withRouter, Redirect } from "react-router-dom";
@@ -30,8 +31,11 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <h1>Corner Store</h1>
-          <SearchBusiness handleResults={this.handleResults} />
+          <Header />
+          <section className="home-container">
+            <h1>Corner Store</h1>
+            <SearchBusiness handleResults={this.handleResults} />
+          </section>
           <span />
           <SearchCategories handleResults={this.handleResults} />
           <div></div>

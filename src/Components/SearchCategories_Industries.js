@@ -44,7 +44,7 @@ class SearchCategories extends Component {
     this.getBusinessNames(e.value);
   }
 
-  componentWillMount() {
+  componentDidlMount() {
     this.getOptions();
   }
 

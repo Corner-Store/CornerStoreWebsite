@@ -10,7 +10,9 @@ class DisplayBusinesses extends Component {
           {this.props.results.map((data, index) => (
             <div key={index}>
               <div className="businesses-container">
-                <p>{data[0]}</p>
+                <p>
+                  {index + 1}. {data[0]}
+                </p>
                 <p>{data[1]}</p>
               </div>
               <span />

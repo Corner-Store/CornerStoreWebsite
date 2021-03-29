@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SearchBusiness from "../Components/SearchBusinesses";
+import HeaderSearch from "../Components/HeaderSearch";
 import DisplayBusinesses from "../Components/DisplayBusinesses";
 import "../layoutMain.css";
 
@@ -9,15 +9,11 @@ class SearchResultsPage extends Component {
     this.state = {
       results: this.props.location.state.data,
     };
-    this.handleResults = this.handleResults.bind(this);
-  }
-
-  handleResults(results) {
-    this.setState({ results: results });
   }
   render() {
     return (
       <div>
+        <HeaderSearch />
         <span />
         {this.state.results !== null ? (
           <DisplayBusinesses results={this.state.results} />

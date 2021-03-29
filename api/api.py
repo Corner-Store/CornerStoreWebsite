@@ -7,9 +7,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def get_current_time():
-	return {'time': time.time()}
+# @app.route('/')
+# def get_current_time():
+# 	return {'time': time.time()}
 
 
 @app.route('/businesses')
@@ -34,6 +34,7 @@ def search():
 		return {'error': str(e)}
 
 
+
 #get a list of industries
 @app.route('/industries', methods=['GET'])
 def listOfCategories():
@@ -54,3 +55,5 @@ def businessesInCategories(industry_name):
 		return jsonify(businessNames)
 	except Exception as e:
 		return {'error': str(e)}
+if __name__=="__main__":
+    app.run(debug=DEBUG, host='0.0.0.0', port=PORT)

@@ -1,23 +1,17 @@
-import "./App.css";
-//import { businessesJSON } from "./businesses";
-import SearchBusiness from "./Search.js";
+import React, { Component } from "react";
+import Header from "./Components/Header";
+import Routes from "./Routes";
+import "./layoutMain.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Welcome to Corner Store</h1>
-      <SearchBusiness />
-      {/* <ul data-testid="item-list-businesses">
-        {businessesJSON.map((item, index) => (
-          <li key={index} className="list-item" data-testid="single-item">
-            <a href={item.link} data-testid="display-businesses">
-              {item.name}
-            </a>
-          </li>
-        ))}
-      </ul> */}
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Routes />
+      </div>
+    );
+  }
 }
 
 export default App;

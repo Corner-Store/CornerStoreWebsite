@@ -13,7 +13,7 @@ class SearchCategories extends Component {
   }
   // Get a dropdown of categories
   async getOptions() {
-    const res = await axios.get("http://localhost:5000/industries");
+    const res = await axios.get("http://localhost:5000/api/industries");
     const data = res.data;
     const options = data.map((industry) => ({
       value: industry,
@@ -25,7 +25,7 @@ class SearchCategories extends Component {
 
   async getBusinessNames(industry) {
     const res = await axios.get(
-      "http://localhost:5000/industries/" + industry + "/businesses"
+      "http://localhost:5000/api/industries/" + industry + "/businesses"
     );
     const data = res.data;
     this.setState({ businessNames: data });

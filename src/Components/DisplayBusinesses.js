@@ -14,6 +14,7 @@ class DisplayBusinesses extends Component {
                   {index + 1}. {data[0]}
                 </p>
                 <p>{data[1]}</p>
+                <p>{data[2] !== null ? data[2] : ""}</p>
               </div>
               <span />
             </div>

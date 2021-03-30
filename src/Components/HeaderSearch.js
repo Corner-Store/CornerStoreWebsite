@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-class Header extends Component {
+
+class HeaderSearch extends Component {
   render() {
     return (
       <header id="home">
-        <div className="navbar">
+        <div className="navbarsearch">
           <Link to="/">Home</Link>
         </div>
       </header>
@@ -12,4 +13,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default HeaderSearch;

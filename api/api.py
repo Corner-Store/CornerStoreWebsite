@@ -28,23 +28,44 @@ def get_all_business_names():
 	except Exception as e:
 		return {'error': str(e)}
 
-@app.route('/search', methods =['POST'])
+
+#search business
+@app.route('/search', methods=['POST'])
 def search():
 	try:
 		connection = db.get_connection()
-		searchInput = request.form['input']
+		searchInput = request.form['search']
 		businesses = db.search(connection, searchInput)
 		return jsonify(businesses)
 	except Exception as e:
 		return {'error': str(e)}
 
-@app.route("/favicon.ico")
-def favicon():
-    return "", 200
 
 @app.errorhandler(404)
 def not_found(e):
 	return app.send_static_file('index.html')
 
+
+
+#get a list of industries
+@app.route('/industries', methods=['GET'])
+def listOfCategories():
+	try:
+		connection = db.get_connection()
+		industries = db.getIndustries(connection)
+		return jsonify(industries)
+	except Exception as e:
+		return {'error': str(e)}
+
+
+#provide a list of businesses in industries
+@app.route('/industries/<industry_name>/businesses', methods=['GET'])
+def businessesInCategories(industry_name):
+	try:
+		connection = db.get_connection()
+		businessNames = db.getBusinessNamesByIndustries(connection, industry_name)
+		return jsonify(businessNames)
+	except Exception as e:
+		return {'error': str(e)}
 if __name__=="__main__":
     app.run(debug=False, host='0.0.0.0', port=PORT)

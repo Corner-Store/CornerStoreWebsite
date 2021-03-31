@@ -22,7 +22,7 @@
   "scripts": {
     "start": "concurrently \"npm:build-react\" \"npm:build-flask\" ",
     "build-react": "react-scripts start",
-    "build-flask": "cd api && venv/bin/flask run --no-debugger",
+    "build-flask": "cd api && venv/bin/flask run",
     "heroku-postbuild": "npm install && npm run-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

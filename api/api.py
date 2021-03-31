@@ -2,11 +2,12 @@ import time
 from flask import Flask, request, jsonify, render_template
 import db
 import os
+from flask_cors import CORS
 
+app = Flask(__name__,static_folder='static', static_url_path='')
+CORS(app)
 
-app = Flask(__name__,static_folder='../../build', static_url_path='')
-print(os.listdir())
-
+print("List1", os.listdir())
 
 
 # Sets "NODE_ENV" to "production"

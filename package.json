@@ -20,7 +20,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "concurrently \"npm:build-react\" \"npm:build-flask\" ",
+    "start": "build-react",
+    "start-all": "concurrently \"npm:build-react\" \"npm:build-flask\" ",
     "build-react": "react-scripts start",
     "build-flask": "cd api && venv/bin/flask run",
     "heroku-postbuild": "npm install && npm run-script build",

@@ -49,6 +49,6 @@ def getBusinessNamesByIndustries(connection, industry):
     cur = connection.cursor()
     cur.execute('SELECT "Name of Business" , "Industry" FROM public."Businesses" WHERE "Industry" = ' + "'" + str(industry) + "';")
     raw_rows = cur.fetchall()
-    businessesInIndustries = [raw_row[0] for raw_row in raw_rows]
+    businesses = [raw_row[0] for raw_row in raw_rows]
     cur.close()
     return raw_rows

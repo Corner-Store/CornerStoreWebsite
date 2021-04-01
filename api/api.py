@@ -12,7 +12,7 @@ CORS(app)
 # 	return {'time': time.time()}
 
 
-@app.route('/businesses')
+@app.route('/api/businesses')
 def get_all_business_names():
 	try:
 		connection = db.get_connection()
@@ -23,12 +23,13 @@ def get_all_business_names():
 
 
 #search business
-@app.route('/search', methods=['POST'])
+@app.route('/api/search', methods=['POST'])
 def search():
 	try:
 		connection = db.get_connection()
 		searchInput = request.form['search']
-		businesses = db.search(connection, searchInput)
+		locationInput = request.form['location']
+		businesses = db.search(connection, searchInput, locationInput)
 		return jsonify(businesses)
 	except Exception as e:
 		return {'error': str(e)}
@@ -36,7 +37,7 @@ def search():
 
 
 #get a list of industries
-@app.route('/industries', methods=['GET'])
+@app.route('/api/industries', methods=['GET'])
 def listOfCategories():
 	try:
 		connection = db.get_connection()
@@ -47,7 +48,7 @@ def listOfCategories():
 
 
 #provide a list of businesses in industries
-@app.route('/industries/<industry_name>/businesses', methods=['GET'])
+@app.route('/api/industries/<industry_name>/businesses', methods=['GET'])
 def businessesInCategories(industry_name):
 	try:
 		connection = db.get_connection()

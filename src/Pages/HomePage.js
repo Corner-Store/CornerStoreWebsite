@@ -15,7 +15,8 @@ class App extends Component {
     this.handleResults = this.handleResults.bind(this);
   }
   handleResults(results) {
-    this.setState({ results: results, redirectPage: true });
+      this.setState({ results: results, redirectPage: true });
+
   }
 
   render() {

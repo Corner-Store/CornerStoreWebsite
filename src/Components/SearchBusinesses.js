@@ -9,7 +9,7 @@ class SearchBusiness extends React.Component {
       location: "",
       businessNames: null,
       itemSearch: "",
-      invalidInput: false,
+      invalidInput: "",
     };
     this.handleFilter = this.handleFilter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,51 +23,57 @@ class SearchBusiness extends React.Component {
     this.setState({ location: event.target.value });
   }
   handleSubmit(event) {
-    if (this.state.search.length > 0) {
+    if (this.state.search.length > 0 && this.state.location.length > 0) {
       console.log("Request to backend");
       let data = new FormData();
       data.append("search", this.state.search);
+      data.append("location", this.state.location);
       let requestSearch = {
         method: "POST",
-        header: { content_type: "application/json" },
+        header: { content_type: "multipart/form-data" },
         body: data,
       };
-      fetch("http://localhost:5000/search", requestSearch)
+      fetch("http://localhost:5000/api/search", requestSearch)
         .then((response) => {
           return response.json();
         })
         .then((json) => {
           this.setState({ businessNames: Array.from(json), itemSearch: true });
           this.props.handleResults(this.state.businessNames);
+        })
+        .catch(function (error) {
+          console.warn(error);
         });
       event.preventDefault();
     } else {
-      this.setState({ invalidInput: true });
+      alert("Please fill in all fields.");
     }
   }
 
   render() {
     return (
-      <div className="search-bar-box">
-        <form onSubmit={this.handleSubmit} action="">
-          <input
-            type="text"
-            placeholder="I'm Looking For:"
-            value={this.state.search}
-            onChange={this.handleFilter}
-            className="right-search-outline "
-          />
-          <data className="vertical-line" />
-          <input
-            type="text"
-            placeholder="Where to:"
-            value={this.state.location}
-            onChange={this.handleLocation}
-            className="left-search-outline "
-          />
-          <data className="vertical-line" />
-          <input type="submit" value="Search" className="search-button" />
-        </form>
+      <div>
+        <div className="search-bar-box">
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              placeholder="I'm Looking For:"
+              onChange={this.handleFilter}
+              name="input"
+              className="right-search-outline "
+            />
+            <data className="vertical-line" />
+            <input
+              type="text"
+              placeholder="Where to:"
+              onChange={this.handleLocation}
+              name="location"
+              className="left-search-outline "
+            />
+            <data className="vertical-line" />
+            <input type="submit" value="Search" className="search-button" />
+          </form>
+        </div>
       </div>
     );
   }

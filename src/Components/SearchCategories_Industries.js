@@ -49,8 +49,10 @@ class SearchCategories extends Component {
 
   render() {
     return (
-      <div>
+      <div  class = "listOfCategories">
         <Select
+          placeholder = "All Categories"
+          openMenuOnClick={false}
           options={this.state.selectOptions}
           onChange={this.handleChange.bind(this)}
         />

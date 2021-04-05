@@ -3,7 +3,9 @@ import Header from "../Components/Header";
 import SearchBusiness from "../Components/SearchBusinesses";
 import SearchCategories from "../Components/SearchCategories_Industries";
 import { withRouter, Redirect } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
 import "../layoutMain.css";
+import CategoryCard from "../Components/CategoryCard";
 
 class App extends Component {
   constructor(props) {
@@ -38,7 +40,11 @@ class App extends Component {
           </section>
           <span />
           <SearchCategories handleResults={this.handleResults} />
-          <div></div>
+          <Carousel axis="horizontal">
+            <CategoryCard />
+            <CategoryCard />
+            <CategoryCard />
+          </Carousel>
         </div>
       );
     }

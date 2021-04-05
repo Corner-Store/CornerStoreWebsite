@@ -268,9 +268,7 @@ body {
   opacity: 0.8;
   cursor: pointer;
 }
-<div class="row" > .columnImage img:hover {
-  opacity: 1;
-}
+
 
 /* Clear floats after the columns */
 .rowImage:after {
@@ -458,3 +456,241 @@ body {
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content .popup-modal {
   opacity: 0;
 }
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Design for the Categories options
+/* ------------------------------------------------------------------ */
+
+/* content at start */
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+/* Carousel design
+/* ------------------------------------------------------------------ */
+
+/* content at start */
+
+body {
+	background-color: #f6f6f6;
+	text-align: center;
+	color: white;
+	margin: 0;
+}
+a,
+a:hover {
+	text-decoration: none;
+	cursor: default;
+}
+.card-container {
+	display: inline-block;
+	overflow: hidden;
+	margin: 26px auto 0 auto;
+	min-width: 230px;
+	max-width: 308px;
+	color: #000;
+	font-size: 16px;
+	text-align: left;
+	box-shadow: 0px 1px 1px 0px #ccc;
+}
+.card-container a {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.card {
+	padding: 0;
+	box-shadow: 0px 1px 1px 0px #ccc;
+	height: 323px;
+}
+.card-hero-img {
+	width: 100%;
+	height: 133px;
+}
+.card-heading-container {
+	padding: 19px 19px 0;
+	display: flex;
+	align-items: center;
+}
+.card-social-icon {
+	padding: 0;
+	border-radius: 50px;
+	max-width: 45px;
+}
+.card-title-container {
+	padding-left: 10px;
+	text-align: left;
+}
+h3.card-title {
+	font-size: 23px;
+	color: #3a3a3a;
+	font-family: arial;
+	font-weight: bold;
+	margin: 0;
+}
+.card-sub-title {
+	font-size: 12px;
+	color: #adadad;
+	font-family: arial;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+}
+.icon-container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+}
+.card-text-container {
+	position: relative;
+}
+.card-text {
+	font-size: 12px;
+	line-height: 1.584;
+	color: #3a3a3a;
+	font-family: arial;
+	padding: 19px;
+	margin: 0;
+	text-align: left;
+}
+/* HEART ICON - NOT LIKED*/
+.far.fa-heart,
+.fas.fa-heart {
+	padding: 0 0px 19px 19px;
+	color: #2a8631;
+	z-index: 9999999;
+	display: flex;
+}
+
+.far.fa-heart,
+.fas.fa-heart:hover {
+	cursor: pointer;
+}
+
+.heart-liked-text {
+	margin: 0;
+	display: inline-block;
+	padding-left: 10px;
+	text-transform: uppercase;
+	font-family: arial;
+	font-weight: 700;
+	font-size: 12px;
+	margin-top: 1px;
+	color: #f6f6f6;
+	-webkit-transition: ease-in-out all 0.3s;
+	transition: ease-in-out all 0.3s;
+}
+.liked {
+	color: #ed1965;
+}
+@media (max-width: 800px) {
+	h3.card-title {
+		font-size: 18px;
+	}
+	.card-sub-title {
+		font-size: 12px;
+	}
+	.card-text {
+		font-size: 12px;
+	}
+}
+
+

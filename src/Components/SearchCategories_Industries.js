@@ -25,7 +25,9 @@ class SearchCategories extends Component {
 
   async getBusinessNames(industry) {
     const res = await axios.get(
-      "http://localhost:5000/api/industries/" + industry + "/businesses"
+      "https://cornerstoreappbackend.herokuapp.com/api/industries/" +
+        industry +
+        "/businesses"
     );
     const data = res.data;
     this.setState({ businessNames: data });
@@ -34,7 +36,7 @@ class SearchCategories extends Component {
       this.state.businessNames.length &&
       this.state.businessNames.length > 0
     ) {
-      //Use the handle results function from the parent page to redirect to show the businesses 
+      //Use the handle results function from the parent page to redirect to show the businesses
       this.props.handleResults(this.state.businessNames);
     }
   }

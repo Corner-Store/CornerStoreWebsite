@@ -25,7 +25,7 @@ class SearchCategories extends Component {
 
   async getBusinessNames(industry) {
     const res = await axios.get(
-      "http://localhost:5000/api/industries/" + industry + "/businesses"
+      "https://cornerstoreapp.herokuapp.com/api/industries/" + industry + "/businesses"
     );
     const data = res.data;
     this.setState({ businessNames: data });

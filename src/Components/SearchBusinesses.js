@@ -1,7 +1,7 @@
 import React from "react";
 import "../layoutMain.css";
 
-//Description: Search businesses contains the search bar for finding a shop name or industry 
+//Description: Search businesses contains the search bar for finding a shop name or industry
 //and a search for the location they want to search in.
 
 class SearchBusiness extends React.Component {
@@ -39,7 +39,7 @@ class SearchBusiness extends React.Component {
         header: { content_type: "multipart/form-data" },
         body: data,
       };
-      fetch("http://localhost:5000/api/search", requestSearch)
+      fetch("https://cornerstoreapp.herokuapp.com/api/search", requestSearch)
         .then((response) => {
           return response.json();
         })

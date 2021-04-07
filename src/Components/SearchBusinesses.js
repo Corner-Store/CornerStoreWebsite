@@ -1,30 +1,36 @@
 import React from "react";
 import "../layoutMain.css";
 
+//Description: Search businesses contains the search bar for finding a shop name or industry 
+//and a search for the location they want to search in.
+
 class SearchBusiness extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       search: "",
       location: "",
-      businessNames: null,
-      itemSearch: "",
-      invalidInput: "",
     };
-    this.handleFilter = this.handleFilter.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleLocation = this.handleLocation.bind(this);
   }
-  handleFilter(event) {
+
+  //Set users' search for industry or shop name
+  handleSearch(event) {
     this.setState({ search: event.target.value });
   }
 
+  //Set users' search for the city of where they want to find the business
   handleLocation(event) {
     this.setState({ location: event.target.value });
   }
   handleSubmit(event) {
+    //Check for valid input for search and location
     if (this.state.search.length > 0 && this.state.location.length > 0) {
       console.log("Request to backend");
+
+      //Create form data for api to recieve
       let data = new FormData();
       data.append("search", this.state.search);
       data.append("location", this.state.location);
@@ -38,8 +44,8 @@ class SearchBusiness extends React.Component {
           return response.json();
         })
         .then((json) => {
-          this.setState({ businessNames: Array.from(json), itemSearch: true });
-          this.props.handleResults(this.state.businessNames);
+          //Use the handle results function from the parent page to redirect to show the businesses
+          this.props.handleResults(Array.from(json));
         })
         .catch(function (error) {
           console.warn(error);
@@ -58,7 +64,7 @@ class SearchBusiness extends React.Component {
             <input
               type="text"
               placeholder="I'm Looking For:"
-              onChange={this.handleFilter}
+              onChange={this.handleSearch}
               name="input"
               className="right-search-outline "
             />

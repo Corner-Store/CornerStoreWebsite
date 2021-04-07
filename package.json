@@ -19,8 +19,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "concurrently \"npm:build-react\" \"npm:build-flask\" ",
-    "build-react": "react-scripts start",
+    "start": "react-scripts start",
     "build-flask": "cd api && venv/bin/flask run --no-debugger",
     "build": "react-scripts build",
     "test": "react-scripts test",

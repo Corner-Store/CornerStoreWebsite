@@ -9,7 +9,7 @@ class HeaderSearch extends Component {
         <div className="navbarsearch">
           <Link to="/">Home</Link>
           <div className="navbarsearch-centered">
-            <a><SearchBusiness handleResults={this.props.handleResults} /></a>
+            <SearchBusiness handleResults={this.props.handleResults} />
           </div>
         </div>
       </header>

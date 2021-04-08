@@ -13,7 +13,7 @@ class SearchCategories extends Component {
   }
   // Get a dropdown of categories
   async getOptions() {
-    const res = await axios.get("http://localhost:5000/api/industries");
+    const res = await axios.get("https://cornerstoreappbackend.herokuapp.com/api/industries");
     const data = res.data;
     const options = data.map((industry) => ({
       value: industry,

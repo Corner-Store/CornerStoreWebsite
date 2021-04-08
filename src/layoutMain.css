@@ -2,8 +2,8 @@
 /* Home Screen
 /* ------------------------------------------------------------------ */
 .home-container {
-  background: url("http://localhost:3000/images/home-background.png") center
-    center/cover no-repeat;
+  background: url("https://cornerstoreapp.herokuapp.com/images/home-background.png")
+    center center/cover no-repeat;
   height: 50vh;
   width: 100%;
   display: flex;
@@ -69,7 +69,6 @@ body {
   margin: auto;
   padding: 10px;
   border-spacing: 5px;
-  text-align: center;
 }
 .businesses-container {
   border-radius: 10px;
@@ -153,18 +152,19 @@ body {
 
 /* Navbar container */
 .navbarsearch {
-  padding: 14px 16px;
   overflow: hidden;
   background-color: #ffffff;
   font-family: Arial;
 }
 
 /* Links inside the navbar */
-.navbarsearch-centered a {
-  float: none;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.navbarsearch a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 /* The dropdown container */

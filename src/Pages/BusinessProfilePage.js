@@ -11,7 +11,7 @@ class BusinessProfilePage extends Component {
     super(props);
     this.state = {
       // Retrieve data passed from home page and set to searchResults
-      searchResults: this.props.location.state.passResults,
+      businessChoice: this.props.location.state.businessProfileResult,
     };
     this.handleResults = this.handleResults.bind(this);
   }
@@ -19,7 +19,7 @@ class BusinessProfilePage extends Component {
   //Sets the new search results to be displayed later and checks if the new results exists
   handleResults(newResults) {
     if (newResults.length > 0) {
-      this.setState({ searchResults: newResults });
+      this.setState({ businessChoice: newResults });
     }
   }
   render() {
@@ -29,9 +29,8 @@ class BusinessProfilePage extends Component {
         <HeaderSearch handleResults={this.handleResults} />
         <span />
         {/* Check if there is data available to display, if not, show no results */}
-        {this.state.searchResults.length > 0 ? (
-          // Pass search results for businesses to display
-          <DisplayBusinessProfile results={this.state.searchResults} />
+        {this.state.businessChoice.length > 0 ? (
+          <DisplayBusinessProfile business={this.state.businessChoice} />
         ) : (
           <div className="container">No Results Found</div>
         )}

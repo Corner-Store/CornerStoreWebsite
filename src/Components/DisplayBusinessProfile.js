@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter, Link} from 'react-router-dom';
+import { withRouter, Link } from "react-router-dom";
 import "../layoutMain.css";
 
 //Description: Show businesses found from database with name and location
@@ -14,13 +14,11 @@ import "../layoutMain.css";
 
 */
 function DisplayBusinessProfile(props) {
-
   return (
     <div>
       <span />
       <div className="containerProfile">
-
-          {/* For Map Navigation */}
+        {/* For Map Navigation */}
         <div className="mainProfile">
           <p> Zip Code </p>
         </div>
@@ -29,14 +27,26 @@ function DisplayBusinessProfile(props) {
           {/* Details of business profile - Needs to automate hide icons if data dont exist*/}
           <div className="alignLeft">
             <h1> {props.business[0]}</h1>
-            <p class="title" >{props.business[6] !== null ? props.business[6] : ""}</p>
+            <p class="title">
+              {props.business[6] !== null ? props.business[6] : ""}
+            </p>
 
-            <i class="fa fa-phone"> {props.business[1] !== null ? props.business[1] : ""}</i>
+            <i class="fa fa-phone">
+              {" "}
+              {props.business[1] !== null ? props.business[1] : ""}
+            </i>
             <p></p>
-            <i class="fa fa-envelope"> {props.business[2] !== null ? props.business[2] : ""}</i>
+            <i class="fa fa-envelope">
+              {" "}
+              {props.business[2] !== null ? props.business[2] : ""}
+            </i>
 
-            <p class="thick">Adresss </p>
-            <p> {props.business[3] !== null ? props.business[3] : ""} - {props.business[4] !== null ? props.business[4] : ""} </p>
+            <p class="thick">Address </p>
+            <p>
+              {" "}
+              {props.business[3] !== null ? props.business[3] : ""} -{" "}
+              {props.business[4] !== null ? props.business[4] : ""}{" "}
+            </p>
             <hr class="solid"></hr>
           </div>
         </div>
@@ -44,6 +54,6 @@ function DisplayBusinessProfile(props) {
 
       <span />
     </div>
-  )
+  );
 }
 export default DisplayBusinessProfile;

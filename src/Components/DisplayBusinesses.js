@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import "../layoutMain.css";
-import { withRouter, Link} from 'react-router-dom';
+import { withRouter, Link } from "react-router-dom";
 
 //Description: Show businesses found from database with name and location
 
 class DisplayBusinesses extends Component {
-
   constructor(props) {
     super(props);
     this.redirectToBusinessProfile = this.redirectToBusinessProfile.bind(this);
@@ -27,14 +26,16 @@ class DisplayBusinesses extends Component {
         <div className="container">
           {/* Use data passed from search results page and display */}
           {this.props.results.map((business, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              onClick={() => this.redirectToBusinessProfile(business)}
+            >
               <div className="businesses-container">
                 <p>
                   {index + 1}. {business[0]}
                 </p>
                 <p>{business[1]}</p>
                 <p>{business[2] !== null ? business[2] : ""}</p>
-                <a onClick={() => this.redirectToBusinessProfile(business)}>Shop Info</a>
               </div>
               <span />
             </div>

@@ -24,22 +24,12 @@ class SearchResultsPage extends Component {
     }
   }
 
-  //Redirect page to /businessProfile with the business shop name
-  handleResults(businessProfileChoice) {
-    this.props.history.push({
-      pathname: "/businessProfile",
-      // Pass results data to the search results page
-      state: { businessProfileResult: businessProfileChoice },
-    });
-  }
-
   render() {
 
     const searchResult = (
       <React.Fragment>
-        // Pass search results for businesses to display
-        <DisplayBusinesses results={this.state.searchResults} />
-        {this.state.businessProfileResult > 0 ? < DisplayBusinessProfile result = {this.state.businessProfileResult}/> : null}
+        {/* // Pass search results for businesses to display */}
+        <DisplayBusinesses results={this.state.searchResults}/>
       </React.Fragment>
     )
 

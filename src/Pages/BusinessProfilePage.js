@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HeaderSearch from "../Components/HeaderSearch";
+import Header from "../Components/Header";
 import DisplayBusinessProfile from "../Components/DisplayBusinessProfile";
 import "../layoutMain.css";
 
@@ -13,21 +13,13 @@ class BusinessProfilePage extends Component {
       // Retrieve data passed from home page and set to searchResults
       businessChoice: this.props.location.state.businessProfileResult,
     };
-    this.handleResults = this.handleResults.bind(this);
   }
 
-  //Sets the new search results to be displayed later and checks if the new results exists
-  handleResults(newResults) {
-    if (newResults.length > 0) {
-      this.setState({ businessChoice: newResults });
-    }
-  }
   render() {
     return (
       <div>
-        {/* Add home button and search bar */}
-        <HeaderSearch handleResults={this.handleResults} />
         <span />
+        <Header/>
         {/* Check if there is data available to display, if not, show no results */}
         {this.state.businessChoice.length > 0 ? (
           <DisplayBusinessProfile business={this.state.businessChoice} />

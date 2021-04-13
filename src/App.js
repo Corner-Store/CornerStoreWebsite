@@ -1,14 +1,14 @@
-import "./App.css";
-//import { businessesJSON } from "./businesses";
-import SearchBusiness from "./Search.js";
+import React, { Component } from "react";
+import Routes from "./Routes";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Welcome to Corner Store</h1>
-      <SearchBusiness />
-    </div>
-  );
+import "./layoutMain.css";
+
+class App extends Component {
+  render() {
+    return (
+        <Routes />
+    );
+  }
 }
 
 export default App;

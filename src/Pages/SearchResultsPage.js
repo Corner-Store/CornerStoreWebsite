@@ -25,14 +25,15 @@ class SearchResultsPage extends Component {
   }
 
   render() {
+
     const searchResult = (
       <React.Fragment>
         {/* // Pass search results for businesses to display */}
-        <DisplayBusinesses results={this.state.searchResults} />
+        <DisplayBusinesses results={this.state.searchResults}/>
       </React.Fragment>
-    );
+    )
 
-    const noResult = <div className="container">No Results Found</div>;
+    const noResult = <div className="container">No Results Found</div>
 
     return (
       <div>

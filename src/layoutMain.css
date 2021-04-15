@@ -268,9 +268,7 @@ body {
   opacity: 0.8;
   cursor: pointer;
 }
-<div class="row" > .columnImage img:hover {
-  opacity: 1;
-}
+
 
 /* Clear floats after the columns */
 .rowImage:after {
@@ -438,6 +436,8 @@ body {
   margin-left: 24px;
 }
 
+
+
 /* fadein/fadeout effect for modal popup
 /* ------------------------------------------------------------------ */
 
@@ -457,4 +457,141 @@ body {
 /* content fadeout */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content .popup-modal {
   opacity: 0;
+}
+
+/*
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*/
+
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid rgb(22, 20, 20);
+}
+
+p.thick {
+  font-weight: bold;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/*Align text right*/
+div.alignRight {
+  text-align: right;
+} 
+
+
+/*Align text left*/
+div.alignLeft {
+  text-align: left;
+} 
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Column container */
+.containerProfile {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.sideProfile {
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.mainProfile {   
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: white;
+  padding: 20px;
+}
+
+/*Map*/
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }

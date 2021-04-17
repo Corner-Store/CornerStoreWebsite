@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "../Components/Header";
 import SearchBusiness from "../Components/SearchBusinesses";
 import SearchCategories from "../Components/SearchCategories_Industries";
 import { withRouter} from "react-router-dom";
@@ -23,12 +22,12 @@ class App extends Component {
     });
   }
 
-  render() {
+  render(){
+
     return (
       <div className="App">
-        <Header />
         <section className="home-container">
-          <h1>Corner Store</h1>
+          <img src="images/FrontPageIcon.png" alt="Corner Store Icon" width="800" height="600" />
           {/* Show search bar and pass in redirect function as handleResults */}
           <SearchBusiness handleResults={this.handleResults} />
         </section>

@@ -16,7 +16,7 @@ class CategoryCard extends Component {
           </div>
         </div>
         <div className="category-title-container">
-          <h3 className="category-title">{this.props.selectOptions}</h3>
+          <h2 className="category-title">{this.props.selectOptions}</h2>
         </div>
       </div>
     );

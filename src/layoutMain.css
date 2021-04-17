@@ -2,9 +2,9 @@
 /* Home Screen
 /* ------------------------------------------------------------------ */
 .home-container {
-  background: url("http://localhost:3000/images/home-background.png") center
+  background: url("http://localhost:3000/images/Background.png") center
     center/cover no-repeat;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -56,10 +56,6 @@
   }
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 /* Display search */
 
 .container {
@@ -104,15 +100,16 @@ body {
   box-shadow: 1px 3px 5px #8b8b8b;
   white-space: nowrap;
 }
+
 .search-button {
-  background-color: #ffffff;
-  height: 20%;
+  background-color: #F4D35E;
   margin: 0px 0px 0px 1vw;
   font-size: 2vw;
   width: fit-content;
   border: none;
   outline: none;
 }
+
 .vertical-line {
   border-left: 1px solid #000000;
   font-size: 2.5vw;
@@ -137,7 +134,7 @@ body {
 /* Navbar container */
 .navbar {
   overflow: hidden;
-  background-color: #ffffbf;
+  background-color: #F4D35E;
   font-family: Arial;
 }
 
@@ -249,11 +246,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial;
 }
 
 /* The grid: Four equal columns that floats next to each other */
@@ -644,4 +636,11 @@ h3.category-title {
   .category-text {
     font-size: 12px;
   }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

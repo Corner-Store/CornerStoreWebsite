@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../layoutMain.css";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 //Description: Show businesses found from database with name and location
 

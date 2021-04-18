@@ -77,7 +77,7 @@ class SearchBusiness extends React.Component {
               className="left-search-outline "
             />
             <data className="vertical-line" />
-            <i class="fa fa-search">
+            <i className="fa fa-search">
             <input type="submit" value="Search"  
             className="search-button" /> 
             </i>

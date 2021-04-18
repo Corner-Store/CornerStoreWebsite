@@ -42,9 +42,7 @@ class SearchCategories extends Component {
       value: industry,
       label: industry,
     }));
-
     this.setState({ selectOptions: options });
-    console.log(this.state.selectOptions);
   }
 
   async getBusinessNames(industry) {
@@ -82,9 +80,7 @@ class SearchCategories extends Component {
         <Carousel responsive={responsive} draggable={false} infinite={true}>
           {this.state.selectOptions.map((categories, index) => (
             <div key={index}>
-              <CategoryCard 
-                selectOptions={categories.value} 
-              />
+              <CategoryCard selectOptions={categories.value} />
             </div>
           ))}
         </Carousel>

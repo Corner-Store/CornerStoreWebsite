@@ -12,7 +12,7 @@ def get_connection():
         database='postgres',
         user=DB_USERNAME,
         password=DB_PASSWORD)
-//Wooop
+
 
 def get_all_business_names(connection):
     cur = connection.cursor()

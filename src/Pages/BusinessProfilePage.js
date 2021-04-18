@@ -9,7 +9,7 @@ class BusinessProfilePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // Retrieve data passed from home page and set to searchResults
+      // Retrieve data passed (if it exists) from home page and set to searchResults
       businessChoice: this.props.location.state?.businessProfileResult,
     };
   }

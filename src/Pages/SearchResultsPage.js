@@ -9,7 +9,7 @@ class SearchResultsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // Retrieve data passed from home page and set to searchResults
+      // Retrieve data (if it exists) passed from home page and set to searchResults
       searchResults: this.props.location.state?.passResults,
     };
   }

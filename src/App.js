@@ -7,18 +7,15 @@ import { withRouter } from "react-router-dom";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      businessResults: null,
-    };
     this.handleResults = this.handleResults.bind(this);
   }
   //Redirect page to /businesses with the search results
   handleResults(newResults) {
     console.log(newResults);
+    // Reload page if currently on /businesses page
     if (this.props.location.pathname === "/businesses") {
       window.location.reload();
     }
-    this.setState({ businessResults: newResults });
     this.props.history.push({
       pathname: "/businesses",
       // Pass results data to the search results page
@@ -27,12 +24,16 @@ class App extends Component {
   }
   render() {
     const HOME = "/";
-    let location = this.props.location;
+    // Get current location path
+    let location = this.props.location.pathname;
+
+    // Add home button and search bar
     const renderHeader = <HeaderSearch handleResults={this.handleResults} />;
+
     return (
       <div>
-        {/* Add home button and search bar */}
-        {location.pathname === HOME ? null : renderHeader}
+        {/* Don't show search bar in homepage*/}
+        {location === HOME ? null : renderHeader}
         <Routes />
       </div>
     );

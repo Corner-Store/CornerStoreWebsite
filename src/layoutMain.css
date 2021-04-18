@@ -1,8 +1,8 @@
 /* ------------------------------------------------------------------ */
 /* Home Screen
-/* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------
 .home-container {
-  background: url("http://localhost:3000/images/home-background.png") center
+background: url("http://localhost:3000/images/home-background.png") center
     center/cover no-repeat;
   height: 50vh;
   width: 100%;
@@ -12,6 +12,13 @@
   align-items: center;
   object-fit: contain;
 }
+ */
+#home-page-background {
+  background-image: url("http://cs-people.bu.edu/jjanvier/Jira/cornerstore_landing_final.jpg");
+  padding-bottom: 25em;
+  padding-top: 25em;
+  margin:0%;
+}
 
 /* ------------------------------------------------------------------ */
 /* Search Button
@@ -19,6 +26,17 @@
 
 .App {
   text-align: center;
+}
+
+#results {
+  width: 50%;
+  float: left;
+}
+
+
+#results-and-maps{
+  margin-top: 7vw;
+  padding: 30px;
 }
 
 .App-logo {
@@ -268,7 +286,7 @@ body {
   opacity: 0.8;
   cursor: pointer;
 }
-<div class="row" > .columnImage img:hover {
+.columnImage img:hover {
   opacity: 1;
 }
 

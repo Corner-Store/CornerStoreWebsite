@@ -16,7 +16,6 @@ class App extends Component {
   }
   handleResults(results) {
       this.setState({ results: results, redirectPage: true });
-
   }
 
   render() {
@@ -32,11 +31,13 @@ class App extends Component {
     } else {
       return (
         <div className="App">
+          <div id = "home-page-background">
           <Header />
           <section className="home-container">
             <h1>Corner Store</h1>
             <SearchBusiness handleResults={this.handleResults} />
           </section>
+          </div>
           <span />
           <SearchCategories handleResults={this.handleResults} />
           <div></div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../layoutMain.css";
 
-//Description: Search businesses contains the search bar for finding a shop name or industry 
+//Description: Search businesses contains the search bar for finding a shop name or industry
 //and a search for the location they want to search in.
 
 class SearchBusiness extends React.Component {
@@ -77,11 +77,11 @@ class SearchBusiness extends React.Component {
               className="left-search-outline "
             />
             <data className="vertical-line" />
-            <i className="fa fa-search">
-            <input type="submit" value="Search"  
-            className="search-button" /> 
-            </i>
 
+            <button type="submit" value="Search" className="search-button">
+              {" "}
+              <i className="fa fa-search" />{" "}
+            </button>
           </form>
         </div>
       </div>

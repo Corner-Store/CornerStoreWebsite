@@ -33,6 +33,9 @@ class SearchCategories extends Component {
       businessNames: null,
       name: "",
     };
+
+    this.handleSelectChange = this.handleSelectChange.bind(this)
+    this.handleCardClick = this.handleCardClick.bind(this)
   }
   // Get a dropdown of categories
   async getOptions() {
@@ -61,9 +64,14 @@ class SearchCategories extends Component {
     }
   }
 
-  handleChange(e) {
+  handleSelectChange(e) {
     this.setState({ id: e.value, name: e.label });
     this.getBusinessNames(e.value);
+  }
+
+  handleCardClick(value) {
+    this.setState({ id: value, name: value})
+    this.getBusinessNames(value)
   }
 
   componentDidMount() {
@@ -73,14 +81,10 @@ class SearchCategories extends Component {
   render() {
     return (
       <div>
-        <Select
-          options={this.state.selectOptions}
-          onChange={this.handleChange.bind(this)}
-        />
         <Carousel responsive={responsive} draggable={false} infinite={true}>
           {this.state.selectOptions.map((categories, index) => (
             <div key={index}>
-              <CategoryCard selectOptions={categories.value} />
+              <CategoryCard cardValue={categories.value} onSelect={() => this.handleCardClick(categories.value)}/>
             </div>
           ))}
         </Carousel>
@@ -90,3 +94,11 @@ class SearchCategories extends Component {
 }
 
 export default SearchCategories;
+
+
+/*
+<Select
+          options={this.state.selectOptions}
+          onChange={this.handleSelectChange}
+        />
+*/

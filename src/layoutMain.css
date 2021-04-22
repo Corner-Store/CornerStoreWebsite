@@ -4,7 +4,7 @@
 .home-container {
   background: url("http://localhost:3000/images/Background.png") center
     center/cover no-repeat;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -66,6 +66,22 @@
   border-spacing: 5px;
   text-align: center;
 }
+
+.containerBusinessProfile {
+  border-radius: 10px;
+  width: 95%;
+  margin: auto;
+  padding: 15px;
+  border-spacing: 5px;
+  text-align: center;
+}
+
+
+.img {
+  border-radius: 10px;
+}
+
+
 .businesses-container {
   border-radius: 23px;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -90,6 +106,7 @@
   outline: none;
 }
 .search-bar-box {
+  border-radius: 10px;
   border: 1px solid #000000;
   height: 4vw;
   width: 50vw;
@@ -102,7 +119,6 @@
 }
 
 .search-button {
-  background-color: #f4d35e;
   margin: 0px 0px 0px 1vw;
   font-size: 2vw;
   width: fit-content;
@@ -150,10 +166,11 @@ body {
 
 /* Navbar container */
 .navbarsearch {
-  padding: 14px 16px;
+  padding: 25px 25px;
   overflow: hidden;
   background-color: #ffffff;
   font-family: Arial;
+  text-align: left;
 }
 
 /* Links inside the navbar */
@@ -535,13 +552,9 @@ div.alignLeft {
   text-align: left;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+div.columnsDivide {
+  columns: 50px 4;
 }
-
 /* Column container */
 .containerProfile {
   display: -ms-flexbox; /* IE10 */
@@ -551,15 +564,28 @@ div.alignLeft {
 }
 
 /* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
+/* Main column */
 .sideProfile {
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
-  background-color: #f1f1f1;
-  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+  padding: 15px;
+  border-spacing: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+
 }
 
-/* Main column */
+.columnDivider {
+  column-count: 3;
+  column-gap: 40px;
+}
+
+/* Map column */
 .mainProfile {
   -ms-flex: 30%; /* IE10 */
   flex: 30%;
@@ -637,4 +663,21 @@ h3.category-title {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+/* ------------------------------------------------------------------ */
+/* Previous - Next button
+/* ------------------------------------------------------------------ */
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
 }

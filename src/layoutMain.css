@@ -2,7 +2,7 @@
 /* Home Screen
 /* ------------------------------------------------------------------ */
 .home-container {
-  background: url("https://cornerstoreapp.herokuapp.com/images/home-background.png")
+  background: url("https://cornerstoreapp.herokuapp.com/images/Background.png")
     center center/cover no-repeat;
   height: 50vh;
   width: 100%;

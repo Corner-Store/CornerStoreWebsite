@@ -3,7 +3,6 @@
 /* ------------------------------------------------------------------ */
 .home-header {
   margin-top: -20px;
-
 }
 .home-container {
   background: url("http://localhost:3000/images/Background.png") center
@@ -552,13 +551,18 @@ p.thick {
 /*Align text right*/
 div.alignRight {
   text-align: right;
+  overflow: hidden;
 }
 
 /*Align text left*/
 div.alignLeft {
   text-align: left;
+  overflow: hidden;
 }
-
+.image-overflow {
+  overflow: hidden;
+  border-radius: 10px;
+}
 div.columnsDivide {
   columns: 50px 4;
 }

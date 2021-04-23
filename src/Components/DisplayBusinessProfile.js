@@ -15,24 +15,17 @@ import SearchBusiness from "../Components/SearchBusinesses";
 
 */
 
-// This only works if we deploy live :D 
+// This only works if we deploy live :D
 function goBack() {
   window.history.back();
 }
 
 function DisplayBusinessProfile(props) {
-
-  const phoneNumber = (
-    <i class="fa fa-phone">
-      {" " + props.business[1]}
-    </i>
-  )
+  const phoneNumber = <i className="fa fa-phone">{" " + props.business[1]}</i>;
 
   const emailContact = (
-    <i class="fa fa-envelope">
-      {" " + props.business[2]}
-    </i>
-  )
+    <i className="fa fa-envelope">{" " + props.business[2]}</i>
+  );
 
   return (
     <div className="containerBusinessProfile">
@@ -47,26 +40,36 @@ function DisplayBusinessProfile(props) {
         {/* Details of business profile - Needs to automate hide icons if data dont exist*/}
         <div className="sideProfile">
           <div className="alignLeft">
-          <a onclick="goBack()" class="previous round"> &#8249; Previous </a>
-          </div>
-          <p></p>
-          <img src="images/businessProfile.jpg" width="800" height="auto" border-radius="10px" />
+            <a onclick="goBack()" class="previous round">
+              &#8249; Previous
+            </a>
 
+            <p></p>
+            <img
+              className="image-overflow"
+              src="images/businessProfile.jpg"
+              width="800"
+              height="auto"
+             
+            />
+          </div>
           <div className="alignLeft">
             <h1> {props.business[0]}</h1>
-            <p class="title">{props.business[6] !== null ? props.business[6] : ""}</p>
+            <p class="title">
+              {props.business[6] !== null ? props.business[6] : ""}
+            </p>
             {props.business[1] !== null ? phoneNumber : null} <p></p>
             {props.business[2] !== null ? emailContact : null}
-
             <div className="alignRight">
               <p class="thick">Address </p>
               <p>
                 {" "}
-                {props.business[3] !== null ? props.business[3] + " - " : ""}{" "}
+                {props.business[3] !== null
+                  ? props.business[3] + " - "
+                  : ""}{" "}
                 {props.business[4] !== null ? props.business[4] : ""}{" "}
               </p>
             </div>
-
             <hr class="solid"></hr>
           </div>
         </div>

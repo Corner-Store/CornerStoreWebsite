@@ -12,6 +12,7 @@ class HeaderSearch extends Component {
               <img
                 src="images/logo.png"
                 alt="Corner Store Logo"
+                className="logo-img"
                 width="50"
                 height="50"
               />

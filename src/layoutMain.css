@@ -91,8 +91,8 @@
   text-align: center;
 }
 .search-bar-box {
-  height: 50px;
-  width: 500px;
+  height: 60px;
+  width: 700px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -102,31 +102,32 @@
 }
 .right-search-outline {
   margin: 0px 10px 0px 10px;
-  width: 225px;
-  font-size: 20px;
+  width: 325px;
+  font-size: 30px;
   border: none;
   outline: none;
 }
 
 .left-search-outline {
   margin: 0px 10px 0px 10px;
-  width: 175px;
-  font-size: 20px;
+  width: 275px;
+  font-size: 30px;
   border: none;
   outline: none;
 }
 
 .search-button {
   margin: 0px 0px 0px 10px;
-  font-size: 25px;
+  font-size: 30px;
   width: 70px;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   border: none;
   outline: none;
   background-color: #f4d35e;
 }
+
 .searchbutton-background {
   background-color: #f4d35e;
 }
@@ -134,7 +135,84 @@
   border-left: 1px solid #000000;
   font-size: 25px;
 }
+@media (max-width: 1024px) and (min-width: 700px) {
+  .search-bar-box {
+    height: 55px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 1px 3px 5px #8b8b8b;
+    white-space: nowrap;
+  }
+  .right-search-outline {
+    margin: 0px 10px 0px 10px;
+    width: 225px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+  }
 
+  .left-search-outline {
+    margin: 0px 10px 0px 10px;
+    width: 175px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+  }
+
+  .search-button {
+    margin: 0px 0px 0px 10px;
+    font-size: 30px;
+    width: 70px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: #f4d35e;
+  }
+}
+@media (max-width: 700px) and (min-width: 0px){
+  .search-bar-box {
+    height: 50px;
+    width: 325px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 1px 3px 5px #8b8b8b;
+    white-space: nowrap;
+  }
+  .right-search-outline {
+    margin: 0px 10px 0px 10px;
+    width: 150px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+  }
+
+  .left-search-outline {
+    margin: 0px 10px 0px 10px;
+    width: 100px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+  }
+
+  .search-button {
+    margin: 0px 0px 0px 2px;
+    font-size: 20px;
+    width: 70px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: #f4d35e;
+  }
+}
 span {
   margin: 0 10px;
 }

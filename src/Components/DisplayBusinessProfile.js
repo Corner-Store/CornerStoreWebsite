@@ -1,7 +1,7 @@
 import React from "react";
 import "../layoutMain.css";
-import { Link } from "react-router-dom";
-import SearchBusiness from "../Components/SearchBusinesses";
+import { withRouter } from "react-router-dom";
+import { browserHistory } from "react-router";
 
 //Description: Show businesses found from database with name and location
 /* Business Data Extract
@@ -40,19 +40,18 @@ function DisplayBusinessProfile(props) {
         {/* Details of business profile - Needs to automate hide icons if data dont exist*/}
         <div className="sideProfile">
           <div className="alignLeft">
-            <a onclick="goBack()" class="previous round">
-              &#8249; Previous
-            </a>
-
-            <p></p>
-            <img
-              className="image-overflow"
-              src="images/businessProfile.jpg"
-              width="800"
-              height="auto"
-             
-            />
+            <div onClick={goBack} className="round">
+              &#8249;
+            </div>
           </div>
+          <p></p>
+          <img
+            className="business-image"
+            src="images/businessProfile.jpg"
+            width="900"
+            height="auto"
+          />
+
           <div className="alignLeft">
             <h1> {props.business[0]}</h1>
             <p class="title">
@@ -63,11 +62,8 @@ function DisplayBusinessProfile(props) {
             <div className="alignRight">
               <p class="thick">Address </p>
               <p>
-                {" "}
-                {props.business[3] !== null
-                  ? props.business[3] + " - "
-                  : ""}{" "}
-                {props.business[4] !== null ? props.business[4] : ""}{" "}
+                {props.business[3] !== null ? props.business[3] + " - " : ""}
+                {props.business[4] !== null ? props.business[4] : ""}
               </p>
             </div>
             <hr class="solid"></hr>
@@ -79,4 +75,4 @@ function DisplayBusinessProfile(props) {
     </div>
   );
 }
-export default DisplayBusinessProfile;
+export default withRouter(DisplayBusinessProfile);

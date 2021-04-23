@@ -71,10 +71,9 @@ class SearchBusiness extends React.Component {
               name="input"
               className="right-search-outline "
             />
-            
           </div>
           <div>
-          <data className="vertical-line" />
+            <data className="vertical-line" />
           </div>
           <div>
             <input

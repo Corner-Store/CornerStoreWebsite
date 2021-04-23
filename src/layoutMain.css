@@ -1,10 +1,14 @@
 /* ------------------------------------------------------------------ */
 /* Home Screen
 /* ------------------------------------------------------------------ */
+.home-header {
+  margin-top: -20px;
+
+}
 .home-container {
-  background: url("https://cornerstoreapp.herokuapp.com/images/Background.png")
-    center center/cover no-repeat;
-  height: 50vh;
+  background: url("http://localhost:3000/images/Background.png") center
+    center/cover no-repeat;
+  height: 700px;
   width: 100%;
   display: flex;
   flex-direction: column;

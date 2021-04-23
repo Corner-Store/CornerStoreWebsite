@@ -10,6 +10,7 @@
   height: 700px;
   width: 100%;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -90,32 +91,30 @@
   font-size: 20px;
   text-align: center;
 }
-
-.right-search-outline {
-  margin: 0px 10px 0px 10px;
-  width: 150px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-}
-
-.left-search-outline {
-  margin: 0px 10px 0px 10px;
-  width: 150px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-}
 .search-bar-box {
-  border: 1px solid #000000;
   height: 50px;
-  width: 400px;
+  width: 500px;
   display: flex;
   align-items: center;
   overflow: hidden;
   background-color: #ffffff;
   box-shadow: 1px 3px 5px #8b8b8b;
   white-space: nowrap;
+}
+.right-search-outline {
+  margin: 0px 10px 0px 10px;
+  width: 225px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.left-search-outline {
+  margin: 0px 10px 0px 10px;
+  width: 175px;
+  font-size: 20px;
+  border: none;
+  outline: none;
 }
 
 .search-button {
@@ -141,7 +140,7 @@ span {
   margin: 0 10px;
 }
 /* ------------------------------------------------------------------ */
-/* Category Dropdown Navigation Bar
+/* Navigation Bar
 /* ------------------------------------------------------------------ */
 
 * {
@@ -152,39 +151,24 @@ body {
   margin: 0;
 }
 
-/*Navigation Bar */
-/* Navbar container */
-.navbar {
-  overflow: hidden;
-  background-color: #f4d35e;
-  font-family: Arial;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
 /* Navbar container */
 .navbarsearch {
   padding: 25px 25px;
   overflow: hidden;
+  display: flex;
   background-color: #ffffff;
   font-family: Arial;
-  text-align: left;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
+.navbarsearch-img {
+  margin-right: auto;
+}
 /* Links inside the navbar */
-.navbarsearch-centered a {
-  float: none;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.navbarsearch-centered {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 /* The dropdown container */
@@ -209,86 +193,6 @@ body {
 .navbar a:hover,
 .dropdown:hover .dropbtn {
   background-color: lightgray;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  width: 100%;
-  left: 0;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Mega Menu header, if needed */
-.dropdown-content .header {
-  background: red;
-  padding: 16px;
-  color: white;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  background-color: #ccc;
-  height: 250px;
-}
-
-/* Style links inside the columns */
-.column a {
-  float: none;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-/* Add a background color on hover */
-.column a:hover {
-  background-color: #ddd;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/*Image grid */
-
-* {
-  box-sizing: border-box;
-}
-
-/* The grid: Four equal columns that floats next to each other */
-.columnImage {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-
-/* Style the images inside the grid */
-.columnImage img {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-/* Clear floats after the columns */
-.rowImage:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* ------------------------------------------------------------------ */
@@ -471,17 +375,6 @@ body {
   opacity: 0;
 }
 
-/*
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-*/
-
 /* Solid border */
 hr.solid {
   border-top: 3px solid rgb(22, 20, 20);
@@ -551,15 +444,13 @@ p.thick {
 /*Align text right*/
 div.alignRight {
   text-align: right;
-  overflow: hidden;
 }
 
 /*Align text left*/
 div.alignLeft {
   text-align: left;
-  overflow: hidden;
 }
-.image-overflow {
+.business-image {
   overflow: hidden;
   border-radius: 10px;
 }
@@ -583,6 +474,7 @@ div.columnsDivide {
   border-radius: 10px;
   width: 60%;
   margin: auto;
+  overflow: hidden;
   padding: 15px;
   border-spacing: 20px;
   text-align: center;
@@ -689,5 +581,11 @@ h3.category-title {
 }
 
 .round {
-  border-radius: 50%;
+  font-size: 35px;
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  /* align-items: center; */
+  text-align: center;
+  border: 1px solid rgba(2, 2, 2, 0.25);
 }

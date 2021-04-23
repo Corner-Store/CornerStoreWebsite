@@ -26,7 +26,6 @@ class SearchResultsPage extends Component {
 
     return (
       <div>
-        <span />
         {/* Check if there is data available to display, if not, show no results */}
         {this.state.searchResults ? searchResult : noResult}
       </div>

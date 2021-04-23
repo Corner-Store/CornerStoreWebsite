@@ -17,7 +17,6 @@ class BusinessProfilePage extends Component {
   render() {
     return (
       <div>
-        <span />
         {/* Check if there is data available to display, if not, show no results */}
         {this.state.businessChoice ? (
           <DisplayBusinessProfile business={this.state.businessChoice} />

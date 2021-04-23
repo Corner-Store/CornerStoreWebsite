@@ -15,6 +15,7 @@ class App extends Component {
 
   //Redirect page to /businesses with the search results
   handleResults(newResults) {
+    window.scrollTo(0, 0);
     this.props.history.push({
       pathname: "/businesses",
       // Pass results data to the search results page

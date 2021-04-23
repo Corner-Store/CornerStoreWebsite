@@ -12,6 +12,7 @@ class DisplayBusinesses extends Component {
 
   //Redirect page to /businessProfile with the business shop name
   redirectToBusinessProfile(businessProfileChoice) {
+    window.scrollTo(0, 0)
     this.props.history.push({
       pathname: "/businessProfile",
       // Pass results data to the search results page

@@ -185,6 +185,14 @@ body {
   text-decoration: none;
 }
 
+/* Links inside the navbar */
+.navbarsearch-centered a {
+  float: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* The dropdown container */
 .dropdown {
   float: left;

@@ -23,13 +23,13 @@ function goBack() {
 function DisplayBusinessProfile(props) {
 
   const phoneNumber = (
-    <i class="fa fa-phone">
+    <i className="fa fa-phone">
       {" " + props.business[1]}
     </i>
   )
 
   const emailContact = (
-    <i class="fa fa-envelope">
+    <i className="fa fa-envelope">
       {" " + props.business[2]}
     </i>
   )

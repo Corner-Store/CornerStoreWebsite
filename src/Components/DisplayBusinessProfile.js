@@ -46,9 +46,9 @@ function DisplayBusinessProfile(props) {
 
             <p></p>
             <img
-              className="image-overflow"
+              className="business-image"
               src="images/businessProfile.jpg"
-              width="800"
+              width="900"
               height="auto"
              
             />

@@ -5,8 +5,8 @@
   margin-top: -20px;
 }
 .home-container {
-  background: url("http://localhost:3000/images/Background.png") center
-    center/cover no-repeat;
+  background: url("https://cornerstoreapp.herokuapp.com/images/Background.png")
+    center center/cover no-repeat;
   height: 700px;
   width: 100%;
   display: flex;
@@ -177,6 +177,16 @@ body {
   font-family: Arial;
   text-align: left;
 }
+
+/* Links inside the navbar */
+/* .navbarsearch a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} */
 
 /* Links inside the navbar */
 .navbarsearch-centered a {

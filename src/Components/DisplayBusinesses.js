@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../layoutMain.css";
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 //Description: Show businesses found from database with name and location
 
@@ -20,17 +20,23 @@ class DisplayBusinesses extends Component {
   }
 
   render() {
+
+    const cardStyle = {
+      cursor: "pointer"
+    }
+
     return (
       <div>
         <span />
         <div className="container">
+          <p></p>
           {/* Use data passed from search results page and display */}
           {this.props.results.map((business, index) => (
             <div
               key={index}
               onClick={() => this.redirectToBusinessProfile(business)}
             >
-              <div className="businesses-container">
+              <div  style={cardStyle} className="businesses-container">
                 <p>
                   {index + 1}. {business[0]}
                 </p>

@@ -9,7 +9,7 @@ class HeaderSearch extends Component {
         <div className="navbarsearch">
           <Link to="/">    <img src="images/logo.png" alt="Corner Store Logo" width="50" height="50"/></Link>
           <div className="navbarsearch-centered">
-            <SearchBusiness handleResults={this.props.handleResults} />
+          <a><SearchBusiness handleResults={this.props.handleResults} /></a>
           </div>
         </div>
       </header>

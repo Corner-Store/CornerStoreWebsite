@@ -31,8 +31,8 @@ class App extends Component {
     const renderHeader = <HeaderSearch handleResults={this.handleResults} />;
 
     return (
-      <div>
-        {/* Don't show search bar in homepage*/}
+      <div className="home-header">
+        {/* Don't show search bar in homepage*/}{" "}
         {location === HOME ? null : renderHeader}
         <Routes />
       </div>

@@ -88,7 +88,9 @@
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   font-size: 20px;
+  overflow: hidden;
   text-align: center;
+  flex-wrap: wrap;
 }
 .search-bar-box {
   height: 60px;
@@ -174,7 +176,7 @@
     background-color: #f4d35e;
   }
 }
-@media (max-width: 700px) and (min-width: 0px){
+@media (max-width: 700px) and (min-width: 0px) {
   .search-bar-box {
     height: 50px;
     width: 325px;

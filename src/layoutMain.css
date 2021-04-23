@@ -176,16 +176,6 @@ body {
 }
 
 /* Links inside the navbar */
-.navbarsearch a {
-  float: left;
-  font-size: 16px;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Links inside the navbar */
 .navbarsearch-centered a {
   float: none;
   position: absolute;

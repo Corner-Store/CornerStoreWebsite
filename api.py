@@ -43,7 +43,7 @@ def search():
 
 @app.errorhandler(404)
 def not_found(e):
-	return "<h1>404 Wrong Page<h1>"
+	return "<h1>404 Page Not Found<h1>"
 
 
 #get a list of industries

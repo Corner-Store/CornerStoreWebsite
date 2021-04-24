@@ -4,7 +4,8 @@ import db
 import os
 from flask_cors import CORS
 
-app = Flask(__name__,static_folder='static', static_url_path='')
+# app = Flask(__name__,static_folder='static', static_url_path='')
+app = Flask(__name__)
 CORS(app)
 
 # Sets "NODE_ENV" to "production"
@@ -14,7 +15,7 @@ PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
 
 @app.route('/')
 def index():
-	return app.send_static_file('index.html')
+	return "<h1>Welcome to Cornerstore Backend<h1>"
 
 
 @app.route('/api/businesses')
@@ -42,8 +43,7 @@ def search():
 
 @app.errorhandler(404)
 def not_found(e):
-	return app.send_static_file('index.html')
-
+	return "<h1>404 Wrong Page<h1>"
 
 
 #get a list of industries

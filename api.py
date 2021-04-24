@@ -7,9 +7,6 @@ from flask_cors import CORS
 app = Flask(__name__,static_folder='static', static_url_path='')
 CORS(app)
 
-print("List1", os.listdir())
-
-
 # Sets "NODE_ENV" to "production"
 IS_PRODUCTION = os.environ.get('NODE_ENV') == 'production'
 # DEBUG = True if not IS_PRODUCTION else False

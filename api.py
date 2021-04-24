@@ -17,7 +17,6 @@ PORT = 5000 if not IS_PRODUCTION else os.environ.get('PORT')
 def index():
 	return "<h1>Welcome to Cornerstore Backend<h1>"
 
-
 @app.route('/api/businesses')
 def get_all_business_names():
 	try:
@@ -40,12 +39,6 @@ def search():
 	except Exception as e:
 		return {'error': str(e)}
 
-
-@app.errorhandler(404)
-def not_found(e):
-	return "<h1>404 Page Not Found<h1>"
-
-
 #get a list of industries
 @app.route('/api/industries', methods=['GET'])
 def listOfCategories():
@@ -66,5 +59,10 @@ def businessesInCategories(industry_name):
 		return jsonify(businessNames)
 	except Exception as e:
 		return {'error': str(e)}
+
+@app.errorhandler(404)
+def not_found(e):
+	return "<h1>404 Page Not Found<h1>"
+
 if __name__=="__main__":
     app.run(debug=False, host='0.0.0.0', port=PORT)

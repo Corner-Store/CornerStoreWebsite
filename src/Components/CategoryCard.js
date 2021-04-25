@@ -48,7 +48,7 @@ class CategoryCard extends Component {
         </div>
 
         <div className="category-title-container">
-          <h2 className="category-title">{this.props.cardValue}</h2>
+          {this.props.cardValue}
         </div>
       </div>
 

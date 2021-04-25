@@ -27,12 +27,23 @@ class App extends Component {
     return (
       <div className="App">
         <section className="home-container">
+          <div className="home-logo">
+            <img
+              src="images/logo.png"
+              alt="Corner Store Logo"
+              className="logo-img"
+              width="50"
+              height="50"
+            />
+          </div>
+
           <img
             src="images/FrontPageIcon.png"
             alt="Corner Store Icon"
             width="800"
             height="175"
           />
+
           {/* Show search bar and pass in redirect function as handleResults */}
           <SearchBusiness handleResults={this.handleResults} />
         </section>

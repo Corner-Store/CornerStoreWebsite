@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Select from "react-select";
 import axios from "axios";
 import CategoryCard from "./CategoryCard";
 import Carousel from "react-multi-carousel";
@@ -94,11 +93,3 @@ class SearchCategories extends Component {
 }
 
 export default SearchCategories;
-
-
-/*
-<Select
-          options={this.state.selectOptions}
-          onChange={this.handleSelectChange}
-        />
-*/

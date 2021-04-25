@@ -43,6 +43,7 @@ class CategoryCard extends Component {
             <img
               className="category-img"
               src={imageURL}
+              alt=""
             />
           </div>
         </div>

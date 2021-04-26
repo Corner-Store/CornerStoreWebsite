@@ -12,7 +12,7 @@ class DisplayBusinesses extends Component {
 
   //Redirect page to /businessProfile with the business shop name
   redirectToBusinessProfile(businessProfileChoice) {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     this.props.history.push({
       pathname: "/businessProfile",
       // Pass results data to the search results page
@@ -21,15 +21,14 @@ class DisplayBusinesses extends Component {
   }
 
   render() {
-
     const cardStyle = {
-      cursor: "pointer"
-    }
+      cursor: "pointer",
+    };
 
     return (
-      <div>
+      <div id="outerDiv">
         <span />
-        <div className="container">
+        <div className="container" id="scrollableContent">
           <p></p>
           {/* Use data passed from search results page and display */}
           {this.props.results.map((business, index) => (
@@ -37,7 +36,7 @@ class DisplayBusinesses extends Component {
               key={index}
               onClick={() => this.redirectToBusinessProfile(business)}
             >
-              <div  style={cardStyle} className="businesses-container">
+              <div style={cardStyle} className="businesses-container">
                 <p>
                   {index + 1}. {business[0]}
                 </p>

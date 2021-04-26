@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Select from "react-select";
 import axios from "axios";
 import CategoryCard from "./CategoryCard";
 import Carousel from "react-multi-carousel";
@@ -9,15 +8,15 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 7,
+    items: 6,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 6,
+    items: 5,
   },
   tablet: {
     breakpoint: { max: 1024, min: 700 },
-    items: 5,
+    items: 4,
   },
   mobile: {
     breakpoint: { max: 700, min: 0 },
@@ -33,8 +32,6 @@ class SearchCategories extends Component {
       businessNames: null,
       name: "",
     };
-
-    this.handleSelectChange = this.handleSelectChange.bind(this)
     this.handleCardClick = this.handleCardClick.bind(this)
   }
   // Get a dropdown of categories
@@ -60,13 +57,8 @@ class SearchCategories extends Component {
       this.state.businessNames.length > 0
     ) {
       //Use the handle results function from the parent page to redirect to show the businesses
-      this.props.handleResults(this.state.businessNames);
+      this.props.handleResults(this.state.businessNames, this.state.name);
     }
-  }
-
-  handleSelectChange(e) {
-    this.setState({ id: e.value, name: e.label });
-    this.getBusinessNames(e.value);
   }
 
   handleCardClick(value) {
@@ -94,11 +86,3 @@ class SearchCategories extends Component {
 }
 
 export default SearchCategories;
-
-
-/*
-<Select
-          options={this.state.selectOptions}
-          onChange={this.handleSelectChange}
-        />
-*/

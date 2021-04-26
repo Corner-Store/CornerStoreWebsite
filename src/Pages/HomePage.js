@@ -14,12 +14,17 @@ class App extends Component {
   }
 
   //Redirect page to /businesses with the search results
-  handleResults(newResults) {
+  handleResults(newResults, itemSearched, locationSearched) {
     window.scrollTo(0, 0);
+    console.log(newResults);
     this.props.history.push({
       pathname: "/businesses",
       // Pass results data to the search results page
-      state: { passResults: newResults },
+      state: {
+        passResults: newResults,
+        passItemSearched: itemSearched,
+        passLocationSearched: locationSearched,
+      },
     });
   }
 
@@ -27,12 +32,23 @@ class App extends Component {
     return (
       <div className="App">
         <section className="home-container">
+          <div className="home-logo">
+            <img
+              src="images/logo.png"
+              alt="Corner Store Logo"
+              className="logo-img"
+              width="50"
+              height="50"
+            />
+          </div>
+
           <img
             src="images/FrontPageIcon.png"
             alt="Corner Store Icon"
             width="800"
             height="175"
           />
+
           {/* Show search bar and pass in redirect function as handleResults */}
           <SearchBusiness handleResults={this.handleResults} />
         </section>

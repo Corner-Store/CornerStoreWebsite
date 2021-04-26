@@ -10,8 +10,7 @@ class App extends Component {
     this.handleResults = this.handleResults.bind(this);
   }
   //Redirect page to /businesses with the search results
-  handleResults(newResults) {
-    console.log(newResults);
+  handleResults(newResults, itemSearched, locationSearched) {
     // Reload page if currently on /businesses page
     if (this.props.location.pathname === "/businesses") {
       window.location.reload();
@@ -19,7 +18,11 @@ class App extends Component {
     this.props.history.push({
       pathname: "/businesses",
       // Pass results data to the search results page
-      state: { passResults: newResults },
+      state: {
+        passResults: newResults,
+        passItemSearched: itemSearched,
+        passLocationSearched: locationSearched,
+      },
     });
   }
   render() {

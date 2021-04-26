@@ -45,7 +45,11 @@ class SearchBusiness extends React.Component {
         })
         .then((json) => {
           //Use the handle results function from the parent page to redirect to show the businesses
-          this.props.handleResults(Array.from(json));
+          this.props.handleResults(
+            Array.from(json),
+            this.state.search,
+            this.state.location
+          );
         })
         .catch(function (error) {
           console.warn(error);
@@ -68,10 +72,9 @@ class SearchBusiness extends React.Component {
               name="input"
               className="right-search-outline "
             />
-            
           </div>
           <div>
-          <data className="vertical-line" />
+            <data className="vertical-line" />
           </div>
           <div>
             <input

@@ -32,8 +32,6 @@ class SearchCategories extends Component {
       businessNames: null,
       name: "",
     };
-
-    this.handleSelectChange = this.handleSelectChange.bind(this)
     this.handleCardClick = this.handleCardClick.bind(this)
   }
   // Get a dropdown of categories
@@ -59,13 +57,8 @@ class SearchCategories extends Component {
       this.state.businessNames.length > 0
     ) {
       //Use the handle results function from the parent page to redirect to show the businesses
-      this.props.handleResults(this.state.businessNames);
+      this.props.handleResults(this.state.businessNames, this.state.name);
     }
-  }
-
-  handleSelectChange(e) {
-    this.setState({ id: e.value, name: e.label });
-    this.getBusinessNames(e.value);
   }
 
   handleCardClick(value) {

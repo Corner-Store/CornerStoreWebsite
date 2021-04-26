@@ -14,12 +14,17 @@ class App extends Component {
   }
 
   //Redirect page to /businesses with the search results
-  handleResults(newResults) {
+  handleResults(newResults, itemSearched, locationSearched) {
     window.scrollTo(0, 0);
+    console.log(newResults);
     this.props.history.push({
       pathname: "/businesses",
       // Pass results data to the search results page
-      state: { passResults: newResults },
+      state: {
+        passResults: newResults,
+        passItemSearched: itemSearched,
+        passLocationSearched: locationSearched,
+      },
     });
   }
 

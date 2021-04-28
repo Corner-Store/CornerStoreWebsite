@@ -78,6 +78,8 @@
   display: flex;
   width: 40%;
   flex: 1;
+  margin-left: 5%;
+  margin-top: 12%;
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -101,14 +103,6 @@
   font-size: 20px;
   overflow: hidden;
   flex-wrap: wrap;
-  text-align: center;
-}
-.containerBusinessProfile {
-  border-radius: 10px;
-  width: 95%;
-  margin: auto;
-  padding: 15px;
-  border-spacing: 5px;
   text-align: center;
 }
 
@@ -556,21 +550,10 @@ div.columnsDivide {
 
 /* Column container */
 .containerProfile {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Main column */
-.sideProfile {
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
   background-color: #ffffff;
-  border-radius: 10px;
-  width: 60%;
-  margin: auto;
+  border-radius: 23px;
+  margin-left: 5%;
+  margin-top: 12%;
   overflow: hidden;
   padding: 15px;
   border-spacing: 20px;
@@ -579,17 +562,10 @@ div.columnsDivide {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 
+
 .columnDivider {
   column-count: 3;
   column-gap: 40px;
-}
-
-/* Map column */
-.mainProfile {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: white;
-  padding: 20px;
 }
 
 /*Map*/

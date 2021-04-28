@@ -1,7 +1,6 @@
 import React from "react";
 import "../layoutMain.css";
 import { withRouter } from "react-router-dom";
-import { browserHistory } from "react-router";
 
 //Description: Show businesses found from database with name and location
 /* Business Data Extract
@@ -50,6 +49,7 @@ function DisplayBusinessProfile(props) {
             src="images/businessProfile.jpg"
             width="900"
             height="auto"
+            alt=""
           />
 
           <div className="alignLeft">

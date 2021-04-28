@@ -6,28 +6,31 @@ import "../layoutMain.css";
 //a search engine and the map of the business locations.
 
 class SearchResultsPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // Retrieve data (if it exists) passed from home page and set to searchResults
-      searchResults: this.props.location.state?.passResults,
-    };
-  }
-
   render() {
-    const searchResult = (
+    const itemSearched = this.props.location.state?.passItemSearched;
+    const locationSearched = this.props.location.state?.passLocationSearched;
+    // Retrieve data (if it exists) passed from home page and set to searchResults
+    const searchResults = this.props.location.state?.passResults;
+    const displaySearchResult = (
       <React.Fragment>
         {/* // Pass search results for businesses to display */}
-        <DisplayBusinesses results={this.state.searchResults} />
+        <DisplayBusinesses results={searchResults} />
       </React.Fragment>
     );
 
     const noResult = <div className="container">No Results Found</div>;
 
     return (
-      <div>
-        {/* Check if there is data available to display, if not, show no results */}
-        {this.state.searchResults ? searchResult : noResult}
+      <div className="container-divide">
+        <div className="info-left">
+          <div className="search-display">
+            {itemSearched}
+            {locationSearched ? <a> in {locationSearched}</a> : null}
+          </div>
+          {/* Check if there is data available to display, if not, show no results */}
+          {searchResults ? displaySearchResult : noResult}
+        </div>
+        <div className="map-right">MAP</div>
       </div>
     );
   }

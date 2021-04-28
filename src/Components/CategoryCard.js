@@ -43,12 +43,13 @@ class CategoryCard extends Component {
             <img
               className="category-img"
               src={imageURL}
+              alt=""
             />
           </div>
         </div>
 
         <div className="category-title-container">
-          <h2 className="category-title">{this.props.cardValue}</h2>
+          {this.props.cardValue}
         </div>
       </div>
 

@@ -27,17 +27,12 @@ function DisplayBusinessProfile(props) {
   );
 
   return (
-    <div className="containerBusinessProfile">
+    <div className="container-divide ">
       <p></p>
       <span />
-      <div className="containerProfile">
-        {/* For Map Navigation */}
-        <div className="mainProfile">
-          <p> Zip Code </p>
-        </div>
-
+      <div className="info-left">
         {/* Details of business profile - Needs to automate hide icons if data dont exist*/}
-        <div className="sideProfile">
+        <div className="containerProfile">
           <div className="alignLeft">
             <div onClick={goBack} className="round">
               &#8249;
@@ -70,7 +65,10 @@ function DisplayBusinessProfile(props) {
           </div>
         </div>
       </div>
-
+      {/* For Map Navigation */}
+      <div className="map-right">
+        <p> Zip Code </p>
+      </div>
       <span />
     </div>
   );

@@ -43,7 +43,7 @@
   margin-top: -20px;
 }
 .home-container {
-  background: url("http://localhost:3000/images/Background.png") center
+  background: url("https://cornerstoreapp.herokuapp.com/images/Background.png") center
     center/cover no-repeat;
   height: 800px;
   width: 100%;

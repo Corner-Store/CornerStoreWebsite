@@ -40,8 +40,7 @@ class DisplayBusinesses extends Component {
                 <p>
                   {index + 1}. {business[0]}
                 </p>
-                <p>{business[1]}</p>
-                <p>{business[2] !== null ? business[2] : ""}</p>
+                <p>{business[3] ? business[3] + ", " : ""} {business[4] ? business[4] + " -" : ""}  {business[5] ? business[5] : ""} </p>
               </div>
               <span />
             </div>

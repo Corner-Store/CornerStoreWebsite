@@ -64,15 +64,7 @@
 /* ------------------------------------------------------------------ */
 /* Display Research Background Screen
 /* ------------------------------------------------------------------ */
-.resultResearch-container {
-  background: url("http://localhost:3000/images/SearchResultBackground.png") center
-    center/cover;
-  overflow-y: scroll;
-  height: 900px;
-  width: 100%;
-  justify-content: center;
-  align-items: left;
-}
+
 
 /* ------------------------------------------------------------------ */
 /* Divide Screen into two sides
@@ -92,8 +84,8 @@
   display: flex;
   width: 40%;
   flex: 1;
-  margin-left: 5%;
-  margin-top: 12%;
+  margin-left: 3%;
+  margin-top: 7%;
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 

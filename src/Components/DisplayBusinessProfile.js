@@ -1,6 +1,7 @@
 import React from "react";
 import "../layoutMain.css";
 import { withRouter } from "react-router-dom";
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 //Description: Show businesses found from database with name and location
 /* Business Data Extract
@@ -18,6 +19,20 @@ import { withRouter } from "react-router-dom";
 function goBack() {
   window.history.back();
 }
+
+const displayMarker = (businessName, lat, long) => {
+  return (
+    <Marker
+      key={businessName ? businessName : "marker"}
+      id={businessName ? businessName : "marker"}
+      position={{
+        lat: parseFloat(lat),
+        lng: parseFloat(long)
+      }}
+    />
+  )
+}
+
 
 function DisplayBusinessProfile(props) {
   const phoneNumber = (
@@ -69,8 +84,8 @@ function DisplayBusinessProfile(props) {
             <div className="alignRight">
               <p className="thick">Address </p>
               <p>
-                {props.business[3] !== null ? props.business[3] + " - " : ""}
-                {props.business[4] !== null ? props.business[4] : ""}
+                {props.business[3] ? props.business[3] + " - " : ""}
+                {props.business[4] ? props.business[4] : ""}
               </p>
             </div>
             <hr className="solid"></hr>
@@ -79,11 +94,27 @@ function DisplayBusinessProfile(props) {
       </div>
       {/* For Map Navigation */}
       <div className="map-right">
-        <p> Zip Code </p>
+        <Map
+          google={props.google}
+          zoom={8}
+          style={ {
+            width: '30%',
+            height: '100%',
+          }}
+          initialCenter={{ lat: 42.407211, lng: -71.382439}}
+        >
+          {/* <Marker position={{ lat: 42.407211, lng: -71.382439}} /> */}
+          {
+              // Check if the business has longitude and latitude
+              props.business[7] && props.business[8] ? displayMarker(props.business[6], props.business[7], props.business[8]) : null
+          }
+        </Map>
       </div>
       <span />
 
     </div>
   );
 }
-export default withRouter(DisplayBusinessProfile);
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyBwzB1uzj0Wcs1JbdEBXFcWymGIG1it_6M'
+})(withRouter(DisplayBusinessProfile));

@@ -3,11 +3,6 @@ import "../layoutMain.css";
 import { withRouter } from "react-router-dom";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 
-const mapStyles = {
-  position: 'absolute',
-  width: '30%',
-  height: '100%'
-};
 
 
 
@@ -33,26 +28,24 @@ function goBack() {
 }
 
 function DisplayBusinessProfile(props) {
-  const phoneNumber = <i className="fa fa-phone">{" " + props.business[1]}</i>;
+  const phoneNumber = (
+    <React.Fragment>
+      <div>
+        <i className="fa fa-phone" />
+        {" " + props.business[1]}{" "}
+      </div>
+    </React.Fragment>
+  );
 
   const emailContact = (
-    <i className="fa fa-envelope">{" " + props.business[2]}</i>
+    <React.Fragment>
+      <div>
+        <i className="fa fa-envelope" />
+        {" " + props.business[2]}
+      </div>
+    </React.Fragment>
   );
-  onMarkerClick = (props, marker, e) =>
-  this.setState({
-    selectedPlace: props,
-    activeMarker: marker,
-    showingInfoWindow: true
-  });
   
-  onClose = props => {
-  if (this.state.showingInfoWindow) {
-    this.setState({
-      showingInfoWindow: false,
-      activeMarker: null
-    });
-  }
-
 //   constructor(props, context) {
 //     super(props, context);
   
@@ -63,43 +56,12 @@ function DisplayBusinessProfile(props) {
 // }
 
   return (
-    <div className="containerBusinessProfile">
+    <div className="container-divide ">
       <p></p>
       <span />
-      <div className="containerProfile">
-        {/* For Map Navigation */}
-        <div className="mainProfile">
-          <p> Zip Code </p>
-          <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={
-          {
-            lat: 42.407211,
-            lng: -71.382439
-          }
-        }
-      >
-        <Marker 
-          position={{ lat: business=>business[10], lng: business=>business[11]}}
-          onClick={this.onMarkerClick}
-          name={'Kenyatta International Convention Centre'}
-        />
-        { <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}
-          onClose={this.onClose}
-        >
-          <div>
-            <h4>{this.state.name}</h4>
-          </div>
-        </InfoWindow> }
-        </Map>
-        </div>
-
+      <div className="info-left">
         {/* Details of business profile - Needs to automate hide icons if data dont exist*/}
-        <div className="sideProfile">
+        <div className="containerProfile">
           <div className="alignLeft">
             <div onClick={goBack} className="round">
               &#8249;
@@ -109,39 +71,42 @@ function DisplayBusinessProfile(props) {
           <img
             className="business-image"
             src="images/businessProfile.jpg"
-            width="900"
+            width="800"
             height="auto"
             alt=""
           />
 
           <div className="alignLeft">
-            <h1> {props.business[0]}</h1>
-            <p class="title">
-              {props.business[6] !== null ? props.business[6] : ""}
+            <h1 className="business-profile-name"> {props.business[0]}</h1>
+            <p className="title">
+              {props.business[6] !== null ? <a href={props.business[6]}>{props.business[6]}</a> : ""}
             </p>
             {props.business[1] !== null ? phoneNumber : null} <p></p>
             {props.business[2] !== null ? emailContact : null}
             <div className="alignRight">
-              <p class="thick">Address </p>
+              <p className="thick">Address </p>
               <p>
                 {props.business[3] !== null ? props.business[3] + " - " : ""}
                 {props.business[4] !== null ? props.business[4] : ""}
               </p>
             </div>
-            <hr class="solid"></hr>
+            <hr className="solid"></hr>
           </div>
         </div>
       </div>
-
+      {/* For Map Navigation */}
+      <div className="map-right">
+        <p> Zip Code </p>
+      </div>
       <span />
     </div>
   );
 }
-}
 
-// export default withRouter(DisplayBusinessProfile);
 
-export default GoogleApiWrapper({
-  apiKey: ''
-})(withRouter(DisplayBusinessProfile));
+export default withRouter(DisplayBusinessProfile);
+
+// export default GoogleApiWrapper({
+//   apiKey: ''
+// })(withRouter(DisplayBusinessProfile));
 

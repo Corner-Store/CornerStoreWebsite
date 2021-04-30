@@ -37,14 +37,14 @@ class DisplayBusinesses extends Component {
               onClick={() => this.redirectToBusinessProfile(business)}
             >
               <div style={cardStyle} className="businesses-container">
-                <body className="business-container-text">
+                <div className="business-container-text">
                   <p className="business-name">
                     {index + 1}. {business[0]}
                   </p>
-                  {business[3] ? business[3] + ", " : ""}{" "}
-                  {business[4] ? business[4] + " -" : ""}{" "}
-                  {business[5] ? business[5] : ""}{" "}
-                </body>
+                  <p className="no-margin"/>{business[3] ? business[3] : ""}
+                  <p className="no-margin"/>{business[4] ? business[4]+", MA": ""} 
+                  <p className="no-margin"/> {business[5] ? business[5] : ""}
+                </div>
               </div>
               <span />
             </div>

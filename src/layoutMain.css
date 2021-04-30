@@ -60,6 +60,20 @@
   position: absolute;
   margin: 20px;
 }
+
+/* ------------------------------------------------------------------ */
+/* Display Research Background Screen
+/* ------------------------------------------------------------------ */
+.resultResearch-container {
+  background: url("http://localhost:3000/images/SearchResultBackground.png") center
+    center/cover;
+  overflow-y: scroll;
+  height: 900px;
+  width: 100%;
+  justify-content: center;
+  align-items: left;
+}
+
 /* ------------------------------------------------------------------ */
 /* Divide Screen into two sides
 /* ------------------------------------------------------------------ */
@@ -101,6 +115,7 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   font-size: 20px;
   overflow: hidden;
+  background: white;
   flex-wrap: wrap;
   font-weight: 300;
 }
@@ -111,8 +126,11 @@
 .business-name {
   font-size: 27px;
   font-weight: 550;
+  margin: 0;
 }
-
+.no-margin{
+  margin: 0;
+}
 .img {
   border-radius: 10px;
 }
@@ -271,7 +289,7 @@ body {
 
 /* Navbar container */
 .navbarsearch {
-  padding: 25px 25px;
+  padding: 2% 4%;
   overflow: hidden;
   display: flex;
   background-color: #ffffff;

@@ -64,7 +64,7 @@ class CategoryCard extends Component {
     }
 
     return (
-      <body style={cardStyle} onClick={this.props.onSelect}>
+      <div style={cardStyle} onClick={this.props.onSelect}>
         <div className="category-container">
           <div className="category">
             <img
@@ -78,12 +78,11 @@ class CategoryCard extends Component {
         <div className="category-title-container">
           {this.props.cardValue}
         </div>
-      </body>
+      </div>
 
     );
   }
 }
 export default CategoryCard;
-
 
 

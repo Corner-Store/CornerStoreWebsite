@@ -35,6 +35,7 @@ class App extends Component {
 
     return (
       <div className="home-header">
+        <style>@import url("https://use.typekit.net/ojj7ywh.css");</style>
         {/* Don't show search bar in homepage*/}{" "}
         {location === HOME ? null : renderHeader}
         <Routes />

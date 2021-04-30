@@ -41,9 +41,9 @@ class DisplayBusinesses extends Component {
                   <p className="business-name">
                     {index + 1}. {business[0]}
                   </p>
-                  {business[3] ? business[3] + ", " : ""}{" "}
-                  {business[4] ? business[4] + " -" : ""}{" "}
-                  {business[5] ? business[5] : ""}{" "}
+                  <p className="no-margin"/>{business[3] ? business[3] : ""}
+                  <p className="no-margin"/>{business[4] ? business[4]+", MA": ""} 
+                  <p className="no-margin"/> {business[5] ? business[5] : ""}
                 </body>
               </div>
               <span />

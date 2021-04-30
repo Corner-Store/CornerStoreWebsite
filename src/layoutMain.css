@@ -60,6 +60,20 @@
   position: absolute;
   margin: 20px;
 }
+
+/* ------------------------------------------------------------------ */
+/* Display Research Background Screen
+/* ------------------------------------------------------------------ */
+.resultResearch-container {
+  background: url("http://localhost:3000/images/SearchResultBackground.png") center
+    center/cover;
+  overflow-y: scroll;
+  height: 900px;
+  width: 100%;
+  justify-content: center;
+  align-items: left;
+}
+
 /* ------------------------------------------------------------------ */
 /* Divide Screen into two sides
 /* ------------------------------------------------------------------ */

@@ -21,7 +21,7 @@ class SearchResultsPage extends Component {
     const noResult = <div className="container">No Results Found</div>;
 
     return (
-      <div className="container-divide">
+      <section className="resultResearch-container">
         <div className="info-left">
           <div className="search-display">
             {itemSearched}
@@ -30,8 +30,7 @@ class SearchResultsPage extends Component {
           {/* Check if there is data available to display, if not, show no results */}
           {searchResults ? displaySearchResult : noResult}
         </div>
-        <div className="map-right">MAP</div>
-      </div>
+      </section>
     );
   }
 }

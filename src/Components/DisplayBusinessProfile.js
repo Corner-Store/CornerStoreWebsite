@@ -82,6 +82,7 @@ function DisplayBusinessProfile(props) {
         <p> Zip Code </p>
       </div>
       <span />
+
     </div>
   );
 }

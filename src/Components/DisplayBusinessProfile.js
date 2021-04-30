@@ -1,6 +1,17 @@
 import React from "react";
 import "../layoutMain.css";
 import { withRouter } from "react-router-dom";
+import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+
+const mapStyles = {
+  position: 'absolute',
+  width: '30%',
+  height: '100%'
+};
+
+
+
+
 
 //Description: Show businesses found from database with name and location
 /* Business Data Extract
@@ -14,6 +25,8 @@ import { withRouter } from "react-router-dom";
 
 */
 
+
+
 // This only works if we deploy live :D
 function goBack() {
   window.history.back();
@@ -25,6 +38,29 @@ function DisplayBusinessProfile(props) {
   const emailContact = (
     <i className="fa fa-envelope">{" " + props.business[2]}</i>
   );
+  onMarkerClick = (props, marker, e) =>
+  this.setState({
+    selectedPlace: props,
+    activeMarker: marker,
+    showingInfoWindow: true
+  });
+  
+  onClose = props => {
+  if (this.state.showingInfoWindow) {
+    this.setState({
+      showingInfoWindow: false,
+      activeMarker: null
+    });
+  }
+
+//   constructor(props, context) {
+//     super(props, context);
+  
+//     this.state = {
+//       visible: false,
+//       searchResults: this.props.location.state?.passResults,
+//     }
+// }
 
   return (
     <div className="containerBusinessProfile">
@@ -34,6 +70,32 @@ function DisplayBusinessProfile(props) {
         {/* For Map Navigation */}
         <div className="mainProfile">
           <p> Zip Code </p>
+          <Map
+        google={this.props.google}
+        zoom={14}
+        style={mapStyles}
+        initialCenter={
+          {
+            lat: 42.407211,
+            lng: -71.382439
+          }
+        }
+      >
+        <Marker 
+          position={{ lat: business=>business[10], lng: business=>business[11]}}
+          onClick={this.onMarkerClick}
+          name={'Kenyatta International Convention Centre'}
+        />
+        { <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}
+          onClose={this.onClose}
+        >
+          <div>
+            <h4>{this.state.name}</h4>
+          </div>
+        </InfoWindow> }
+        </Map>
         </div>
 
         {/* Details of business profile - Needs to automate hide icons if data dont exist*/}
@@ -75,4 +137,11 @@ function DisplayBusinessProfile(props) {
     </div>
   );
 }
-export default withRouter(DisplayBusinessProfile);
+}
+
+// export default withRouter(DisplayBusinessProfile);
+
+export default GoogleApiWrapper({
+  apiKey: ''
+})(withRouter(DisplayBusinessProfile));
+

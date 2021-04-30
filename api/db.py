@@ -25,7 +25,7 @@ def get_all_business_names(connection):
 #Return a list of possible businesses based on name of business
 def search(connection, searchInput, searchLocation):
     cur = connection.cursor()
-    sql ="""SELECT "BusinessName", "Number",  "Email", "Street", "City", "ZipCode", "Website" , "Industry" FROM public."Businesses" WHERE (lower("BusinessName") LIKE %s OR lower("Industry") LIKE %s) AND lower("City") Like %s;"""
+    sql ="""SELECT "BusinessName", "Number",  "Email", "Street", "City", "ZipCode", "Website" , "Industry", "Longitude", "Latitude" FROM public."Businesses" WHERE (lower("BusinessName") LIKE %s OR lower("Industry") LIKE %s) AND lower("City") Like %s;"""
     argInput = "%{}%".format(searchInput.lower())
     argLocation = "{}".format(searchLocation.lower())
 
@@ -49,7 +49,7 @@ def getIndustries(connection):
 #Once an user choose a category
 def getBusinessNamesByIndustries(connection, industry):
     cur = connection.cursor()
-    cur.execute('SELECT "BusinessName", "Number",  "Email", "Street", "City", "ZipCode", "Website"  FROM public."Businesses" WHERE "Industry" = ' + "'" + str(industry) + "';")
+    cur.execute('SELECT "BusinessName", "Number",  "Email", "Street", "City", "ZipCode", "Website", "Longitude", "Latitude"  FROM public."Businesses" WHERE "Industry" = ' + "'" + str(industry) + "';")
     raw_rows = cur.fetchall()
     businessesInIndustries = [raw_row[0] for raw_row in raw_rows]
     cur.close()

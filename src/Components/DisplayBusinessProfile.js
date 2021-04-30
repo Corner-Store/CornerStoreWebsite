@@ -20,16 +20,19 @@ function goBack() {
   window.history.back();
 }
 
-const displayMarker = () => {
+const displayMarker = (businessName, lat, long) => {
   return (
     <Marker
+      key={businessName ? businessName : "marker"}
+      id={businessName ? businessName : "marker"}
       position={{
-        lat: 42.407211,
-        lng: -71.382439
+        lat: parseFloat(lat),
+        lng: parseFloat(long)
       }}
     />
   )
 }
+
 
 function DisplayBusinessProfile(props) {
   const phoneNumber = (
@@ -81,8 +84,8 @@ function DisplayBusinessProfile(props) {
             <div className="alignRight">
               <p className="thick">Address </p>
               <p>
-                {props.business[3] !== null ? props.business[3] + " - " : ""}
-                {props.business[4] !== null ? props.business[4] : ""}
+                {props.business[3] ? props.business[3] + " - " : ""}
+                {props.business[4] ? props.business[4] : ""}
               </p>
             </div>
             <hr className="solid"></hr>
@@ -101,7 +104,10 @@ function DisplayBusinessProfile(props) {
           initialCenter={{ lat: 42.407211, lng: -71.382439}}
         >
           {/* <Marker position={{ lat: 42.407211, lng: -71.382439}} /> */}
-          {displayMarker()}
+          {
+              // Check if the business has longitude and latitude
+              props.business[7] && props.business[8] ? displayMarker(props.business[6], props.business[7], props.business[8]) : null
+          }
         </Map>
       </div>
       <span />

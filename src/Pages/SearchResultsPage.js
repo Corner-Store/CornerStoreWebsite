@@ -6,6 +6,7 @@ import "../layoutMain.css";
 //a search engine and the map of the business locations.
 
 class SearchResultsPage extends Component {
+
   render() {
     const itemSearched = this.props.location.state?.passItemSearched;
     const locationSearched = this.props.location.state?.passLocationSearched;

@@ -1,6 +1,7 @@
 import React from "react";
 import "../layoutMain.css";
 import { withRouter } from "react-router-dom";
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 //Description: Show businesses found from database with name and location
 /* Business Data Extract
@@ -17,6 +18,17 @@ import { withRouter } from "react-router-dom";
 // This only works if we deploy live :D
 function goBack() {
   window.history.back();
+}
+
+const displayMarker = () => {
+  return (
+    <Marker
+      position={{
+        lat: 42.407211,
+        lng: -71.382439
+      }}
+    />
+  )
 }
 
 function DisplayBusinessProfile(props) {
@@ -79,11 +91,24 @@ function DisplayBusinessProfile(props) {
       </div>
       {/* For Map Navigation */}
       <div className="map-right">
-        <p> Zip Code </p>
+        <Map
+          google={props.google}
+          zoom={8}
+          style={ {
+            width: '30%',
+            height: '100%',
+          }}
+          initialCenter={{ lat: 42.407211, lng: -71.382439}}
+        >
+          {/* <Marker position={{ lat: 42.407211, lng: -71.382439}} /> */}
+          {displayMarker()}
+        </Map>
       </div>
       <span />
 
     </div>
   );
 }
-export default withRouter(DisplayBusinessProfile);
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyBwzB1uzj0Wcs1JbdEBXFcWymGIG1it_6M'
+})(withRouter(DisplayBusinessProfile));

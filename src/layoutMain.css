@@ -40,7 +40,7 @@
 /* Home Screen
 /* ------------------------------------------------------------------ */
 .home-header {
-  margin-top: -20px;
+  margin-top: -25px;
 }
 .home-container {
   background: url("http://localhost:3000/images/Background.png") center
@@ -103,7 +103,15 @@
   font-size: 20px;
   overflow: hidden;
   flex-wrap: wrap;
-  text-align: center;
+  font-weight: 300;
+}
+.business-container-text {
+  text-align: left;
+  margin: 4%;
+}
+.business-name {
+  font-size: 27px;
+  font-weight: 550;
 }
 
 .img {
@@ -112,7 +120,9 @@
 /* ------------------------------------------------------------------ */
 /* Search Bar
 /* ------------------------------------------------------------------ */
-
+input::placeholder {
+  font-family: "houschka-pro", sans-serif;
+}
 .search-bar-box {
   height: 60px;
   width: 700px;
@@ -158,7 +168,8 @@
 .search-display {
   margin-left: 7%;
   margin-top: 2%;
-  font-size: 30px;
+  font-size: 36px;
+  font-style: normal;
   font-weight: normal;
 }
 
@@ -472,6 +483,7 @@ hr.solid {
 
 p.thick {
   font-weight: bold;
+  font-size: 18px;
 }
 
 .column {
@@ -506,6 +518,9 @@ p.thick {
 
 .title {
   color: grey;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 0;
 }
 
 .button {
@@ -562,12 +577,15 @@ div.columnsDivide {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 
-
 .columnDivider {
   column-count: 3;
   column-gap: 40px;
 }
-
+.business-profile-name {
+  font-weight: 600;
+  font-size: 32px;
+  margin: 0;
+}
 /*Map*/
 .map-responsive {
   overflow: hidden;
@@ -615,8 +633,8 @@ div.columnsDivide {
 .category-title-container {
   text-align: center;
   margin: 10px;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 @media (max-width: 800px) {

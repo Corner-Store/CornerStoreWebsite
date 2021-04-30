@@ -1,14 +1,12 @@
-body {
+@font-face {
+  font-family: "houschka-pro";
+  src: url("https://use.typekit.net/ojj7ywh.css");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+}
+body,
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "houschka-pro", sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-

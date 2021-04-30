@@ -20,10 +20,22 @@ function goBack() {
 }
 
 function DisplayBusinessProfile(props) {
-  const phoneNumber = <i className="fa fa-phone">{" " + props.business[1]}</i>;
+  const phoneNumber = (
+    <React.Fragment>
+      <div>
+        <i className="fa fa-phone" />
+        {" " + props.business[1]}{" "}
+      </div>
+    </React.Fragment>
+  );
 
   const emailContact = (
-    <i className="fa fa-envelope">{" " + props.business[2]}</i>
+    <React.Fragment>
+      <div>
+        <i className="fa fa-envelope" />
+        {" " + props.business[2]}
+      </div>
+    </React.Fragment>
   );
 
   return (
@@ -42,26 +54,26 @@ function DisplayBusinessProfile(props) {
           <img
             className="business-image"
             src="images/businessProfile.jpg"
-            width="900"
+            width="800"
             height="auto"
             alt=""
           />
 
           <div className="alignLeft">
-            <h1> {props.business[0]}</h1>
-            <p class="title">
-              {props.business[6] !== null ? props.business[6] : ""}
+            <h1 className="business-profile-name"> {props.business[0]}</h1>
+            <p className="title">
+              {props.business[6] !== null ? <a href={props.business[6]}>{props.business[6]}</a> : ""}
             </p>
             {props.business[1] !== null ? phoneNumber : null} <p></p>
             {props.business[2] !== null ? emailContact : null}
             <div className="alignRight">
-              <p class="thick">Address </p>
+              <p className="thick">Address </p>
               <p>
                 {props.business[3] !== null ? props.business[3] + " - " : ""}
                 {props.business[4] !== null ? props.business[4] : ""}
               </p>
             </div>
-            <hr class="solid"></hr>
+            <hr className="solid"></hr>
           </div>
         </div>
       </div>

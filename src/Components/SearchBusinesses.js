@@ -44,6 +44,7 @@ class SearchBusiness extends React.Component {
           return response.json();
         })
         .then((json) => {
+
           //Use the handle results function from the parent page to redirect to show the businesses
           this.props.handleResults(
             Array.from(json),
@@ -79,7 +80,7 @@ class SearchBusiness extends React.Component {
           <div>
             <input
               type="text"
-              placeholder="Where to:"
+              placeholder="Location:"
               onChange={this.handleLocation}
               name="location"
               className="left-search-outline "

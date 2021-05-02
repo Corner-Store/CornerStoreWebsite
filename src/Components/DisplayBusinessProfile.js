@@ -116,5 +116,5 @@ function DisplayBusinessProfile(props) {
   );
 }
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyBwzB1uzj0Wcs1JbdEBXFcWymGIG1it_6M'
+  apiKey: ''
 })(withRouter(DisplayBusinessProfile));
